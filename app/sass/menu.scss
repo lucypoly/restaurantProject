@@ -6,19 +6,31 @@
     color: white;
   }
   .menu-heading {
+    text-align: center;
+    height: 72px;
+
+    a{
+      text-decoration: none;
+      color: white;
+      box-sizing: border-box;
+    }
     .menu-category {
       padding: 12px 24px;
-      width: 33%;
-      background-color: black;
-      color: white;
-      display: inline-block;
+      float: left;
       text-align: center;
       box-sizing: border-box;
       font-size: 36px;
+      width: 33.3%;
       border: 1px solid darkcyan;
       &:hover {
         background-color: darkcyan;
       }
     }
+  }
+  .menu{
+    background-color: white;
+    font-size: 36px;
+    padding: 32px 16px;
+    color: black;
   }
 }
