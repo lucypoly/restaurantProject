@@ -11,6 +11,8 @@ const imageResize = require('gulp-image-resize');
 const handlebars = require('gulp-compile-handlebars');
 const fs = require('fs');
 const rename = require("gulp-rename");
+const postcss = require('gulp-postcss');
+const flexibility = require('postcss-flexibility');
 
 
 // HANDLEBARS
@@ -24,12 +26,18 @@ gulp.task('handlebars', function () {
     options = {
         ignorePartials: true, // ignores any unknown partials. Useful if you only want to handle part of the file
         // partials : {}, // Javascript object that will fill in partials using strings
-        batch: ['app/partials'] // Javascript array of filepaths to use as partials
-        // helpers : {
-        //     capitals : function(str){
-        //         return str.toUpperCase();
-        //     }
-        // } // javascript functions to stand in for helpers used in the handlebars files
+        batch: ['app/partials'], // Javascript array of filepaths to use as partials
+        helpers : {
+            galleryPage : function(items, options) {
+                var out = "<div id='galleryPage' class='row-wrap black container'>";
+
+                for(var i=0, l=items.length; i<l; i++) {
+                    out = out + "<a href='javascript:void(0)'><div class='img-wrap'><img src='" + options.fn(items[i]) + "' /></div></a>";
+                }
+
+                return out + "</div><div id='modal_form'><span id='modal_close'>X</span><p id='imgModal'>Hello</p></div><div id='overlay'></div>";
+            }
+        } // javascript functions to stand in for helpers used in the handlebars files
     };
     return gulp.src('app/templates/**/*.hbs')
         .pipe(handlebars(data, options)) // using ./data/data.json file
@@ -50,6 +58,7 @@ gulp.task('img', () =>
 gulp.task('sass', function () {
     return gulp.src('app/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([flexibility]))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
             cascade: false
@@ -74,12 +83,12 @@ gulp.task('application-watch', ['js'], function (done) {
 
 gulp.task('serve', ['sass', 'js', ], function () {
     browserSync.init({
-        server: 'app'
+        server: ['app', 'app/dist']
     });
 
     gulp.watch(['app/sass/main.scss'], ['sass']);
     gulp.watch('app/js/*.js', ['application-watch']);
-    gulp.watch(['app/*.html']).on('change', browserSync.reload);
+    gulp.watch(['app/dist/*.html']).on('change', browserSync.reload);
     gulp.watch(['app/templates/**'], ['handlebars']);
     gulp.watch(['app/partials/*.hbs'], ['handlebars']);
     gulp.watch(['app/data/data.json'], ['handlebars']);

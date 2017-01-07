@@ -15,9 +15,11 @@ ul.navbar {
   &:hover {
     opacity: 1;
   }
+  .highlight_stay{
+    background-color: darkcyan;
+  }
   li.menu-item {
     float: left;
-    display: inline-block;
     position: relative;
     &:not(:first-child){
       border-left: 1px solid #ccc;
