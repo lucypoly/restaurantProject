@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lucy's restaurant</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <script src="../lib/flex.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="../lib/slider/jquery.bxslider.min.js"></script>
+    <script src="../lib/handlebars-v4.0.5.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pagination.js"></script>
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<link rel="stylesheet" href="../sass/ie.css" />-->
+    <!--<![endif]&ndash;&gt;-->
+</head>
+<body class="rose">
+<header>
+    <ul class="navbar row">
+        <li class="menu-item" id="index"><a href="index.html">Home</a></li>
+        <li class="menu-item" id="gallery"><a href="gallery.html">Gallery</a></li>
+        <li class="dropdown menu-item" id="clients">
+            <a href="javascript:void(0)" class="dropbtn">For clients</a>
+            <ul class="dropdown-content column">
+                <li class="submenu-item"><a href="menu.html">Menu</a></li>
+                <li class="submenu-item"><a href="contacts.html">Contacts</a></li>
+                <li class="submenu-item"><a href="#">Reservation</a></li>
+                <li class="submenu-item"><a href="events.html">Events</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<div id="contacts">
+    <div class="container  center">
+        <h1>Contacts</h1>
+        <div class="row-wrap">
+            <div class="text">
+                <address>
+                    Write us: <a href="mailto:webmaster@example.com">webmaster@example.com</a>.<br>
+                    Visit us at:<br>
+                    Kreshchatyk 1, Kyiv<br>
+                    Ukraine<br>
+                    Contact us: <a href="tel:6497257958">6497257958</a>.
+                </address>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+                <p>
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                    enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                </p>
+            </div>
+            <div id="googleMap"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    2017, by Lucy
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdiHH5M6cCZc0JQqfzCEzmeY4afs7hkW4">
+</script>
+<script src="js/map.js"></script>
+</body>
+</html>

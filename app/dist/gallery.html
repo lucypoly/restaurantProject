@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lucy's restaurant</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <script src="../lib/flex.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="../lib/slider/jquery.bxslider.min.js"></script>
+    <script src="../lib/handlebars-v4.0.5.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pagination.js"></script>
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<link rel="stylesheet" href="../sass/ie.css" />-->
+    <!--<![endif]&ndash;&gt;-->
+</head>
+<body>
+<header>
+    <ul class="navbar row">
+        <li class="menu-item" id="index"><a href="index.html">Home</a></li>
+        <li class="menu-item" id="gallery"><a href="gallery.html">Gallery</a></li>
+        <li class="dropdown menu-item" id="clients">
+            <a href="javascript:void(0)" class="dropbtn">For clients</a>
+            <ul class="dropdown-content column">
+                <li class="submenu-item"><a href="menu.html">Menu</a></li>
+                <li class="submenu-item"><a href="contacts.html">Contacts</a></li>
+                <li class="submenu-item"><a href="#">Reservation</a></li>
+                <li class="submenu-item"><a href="events.html">Events</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+
+<div id='galleryPage' class='row-wrap black container'>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1456418047667-56bcd35b1a88?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1429012178110-d7a734a56176?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;801&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;800&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1453831210728-695502f9f795?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;719&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1478749485505-2a903a729c63?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461009312844-e80697a81cc7?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;883&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461009683693-342af2f2d6ce?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;821&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461010083959-8a5727311252?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;844&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1456418047667-56bcd35b1a88?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1429012178110-d7a734a56176?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;801&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;800&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1453831210728-695502f9f795?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;719&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1478749485505-2a903a729c63?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461009312844-e80697a81cc7?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;883&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461009683693-342af2f2d6ce?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;821&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1461010083959-8a5727311252?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;844&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='https://images.unsplash.com/photo-1456418047667-56bcd35b1a88?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;'/></div>
+        </a>
+</div>
+<div id='modal_form'><span id='modal_close'>X</span>
+    <p id='imgModal'>Hello</p></div>
+<div id='overlay'></div>
+
+
+
+<footer>
+    2017, by Lucy
+</footer></body>
+</html>

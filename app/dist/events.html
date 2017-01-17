@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lucy's restaurant</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <script src="../lib/flex.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="../lib/slider/jquery.bxslider.min.js"></script>
+    <script src="../lib/handlebars-v4.0.5.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pagination.js"></script>
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<link rel="stylesheet" href="../sass/ie.css" />-->
+    <!--<![endif]&ndash;&gt;-->
+</head>
+<body class="gray">
+<header>
+    <ul class="navbar row">
+        <li class="menu-item" id="index"><a href="index.html">Home</a></li>
+        <li class="menu-item" id="gallery"><a href="gallery.html">Gallery</a></li>
+        <li class="dropdown menu-item" id="clients">
+            <a href="javascript:void(0)" class="dropbtn">For clients</a>
+            <ul class="dropdown-content column">
+                <li class="submenu-item"><a href="menu.html">Menu</a></li>
+                <li class="submenu-item"><a href="contacts.html">Contacts</a></li>
+                <li class="submenu-item"><a href="#">Reservation</a></li>
+                <li class="submenu-item"><a href="events.html">Events</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+
+<div id="events" class="content container">
+    <!-- the input fields that will hold the variables we will use -->
+    <input type='hidden' id='current_page'/>
+    <input type='hidden' id='show_per_page'/>
+
+    <div id='content'>
+
+
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event1</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;763&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event2</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468234847176-28606331216a?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;591&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event3</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event4</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event5</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;763&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event6</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468234847176-28606331216a?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;591&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event7</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event8</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event9</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src="https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event10</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src=""/></div>
+                <hr>
+            </div>
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>event11</b> <span>08/01/2017 at 22:00</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
+                        src=""/></div>
+                <hr>
+            </div>
+    </div>
+
+    <div id='page_navigation'></div>
+
+</div>
+
+<footer>
+    2017, by Lucy
+</footer></body>
+</html>
