@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../sass/main.css" rel="stylesheet">
+    <title>lucy's restaurant</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <script src="../lib/flex.js"></script>
+    <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
     <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -13,7 +16,12 @@
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/navbar.js"></script>
-</head><body>
+    <script src="js/main.js"></script>
+    <script src="js/pagination.js"></script>
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<link rel="stylesheet" href="../sass/ie.css" />-->
+    <!--<![endif]&ndash;&gt;-->
+</head><body class="black">
 <header>
     <ul class="navbar row">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
@@ -22,14 +30,14 @@
             <a href="javascript:void(0)" class="dropbtn">For clients</a>
             <ul class="dropdown-content column">
                 <li class="submenu-item"><a href="menu.html">Menu</a></li>
-                <li class="submenu-item"><a href="#">Contacts</a></li>
+                <li class="submenu-item"><a href="contacts.html">Contacts</a></li>
                 <li class="submenu-item"><a href="#">Reservation</a></li>
-                <li class="submenu-item"><a href="#">Events</a></li>
+                <li class="submenu-item"><a href="events.html">Events</a></li>
             </ul>
         </li>
     </ul>
 </header>
-<section class="black">
+<section>
     <div id="menu" class="content">
         <h1>the menu</h1>
         <div class="menu-heading">
@@ -39,13 +47,88 @@
             <a href="javascript:void(0)" onclick="openMenu(event, 'main');">
                 <div class="menu-category black">Main</div>
             </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'desert');">
-                <div class="menu-category black">Desert</div>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'dessert');">
+                <div class="menu-category black">Dessert</div>
             </a>
         </div>
-        <div id="starter" class="menu content">Starter</div>
-        <div id="main" class="menu content">Main</div>
-        <div id="desert" class="menu content">Desert</div>
+        <div class="white padding-30">
+            <div class="right">
+                <span>Sort by price: </span>
+                <button id="low-to-high-sort">&uarr;</button>
+                <button id="high-to-low-sort">&darr;</button>
+            </div>
+            <div id="starter" class="menu content">
+                    <div class="menu-item-starter">
+                        <h1><b class="left">chicken</b> <span class="right price">19</span></h1>
+                        <p>njhdxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-starter">
+                        <h1><b class="left">salad2</b> <span class="right price">18</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-starter">
+                        <h1><b class="left">salad2</b> <span class="right price">10</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-starter">
+                        <h1><b class="left">salad2</b> <span class="right price">5</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-starter">
+                        <h1><b class="left">salad2</b> <span class="right price">32</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+            </div>
+            <div id="main" class="menu content">
+                    <div class="menu-item-main">
+                        <h1><b class="left">chicken</b> <span class="right price">17</span></h1>
+                        <p>njhdxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-main">
+                        <h1><b class="left">salad2</b> <span class="right price">18</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-main">
+                        <h1><b class="left">chicken</b> <span class="right price">28</span></h1>
+                        <p>njhdxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-main">
+                        <h1><b class="left">salad2</b> <span class="right price">4</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+            </div>
+            <div id="dessert" class="menu content">
+                    <div class="menu-item-dessert">
+                        <h1><b class="left">chicken</b> <span class="right price">4</span></h1>
+                        <p>njhdxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-dessert">
+                        <h1><b class="left">salad2</b> <span class="right price">118</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-dessert">
+                        <h1><b class="left">chicken</b> <span class="right price">32</span></h1>
+                        <p>njhdxbwvw</p>
+                        <hr>
+                    </div>
+                    <div class="menu-item-dessert">
+                        <h1><b class="left">salad2</b> <span class="right price">77</span></h1>
+                        <p>njhdtgrtgxbwvw</p>
+                        <hr>
+                    </div>
+            </div>
+        </div>
     </div>
 </section>
 

@@ -6,7 +6,20 @@
 <header>
     {{> navbar}}
 </header>
-    {{#galleryPage images}}{{imgURL}} {{/galleryPage}}
+
+
+<div id='galleryPage' class='row-wrap black container'>
+    {{#each images}}
+        <a href='javascript:void(0)'>
+            <div class='img-wrap'><img src='{{this.imgURL}}'/></div>
+        </a>
+    {{/each}}
+</div>
+<div id='modal_form'><span id='modal_close'>X</span>
+    <p id='imgModal'>Hello</p></div>
+<div id='overlay'></div>
+
+
 
 {{> footer}}
 </body>

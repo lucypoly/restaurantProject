@@ -3,6 +3,8 @@
 @import "header.scss";
 @import "menu.scss";
 @import "gallery.scss";
+@import "contacts.scss";
+@import "events.scss";
 
 
 body, html {height: 100%; width:100%; color: black;  margin:0; padding:0;} body{font-size: 24px}
@@ -11,11 +13,32 @@ h1{font-size: 48px; text-transform: uppercase; margin: 0; padding: 20px 0}
 .content{max-width: 980px;  margin: auto;}
 .blue{background-color: darkcyan; color: white}
 .black{background-color: black; color: white}
-.rose{background-color: rgba(255, 200, 150, 0.42); color: black}
+.white{background-color: white; color: black}
+.gray{background-color: #607d8b; color: white}
+.rose{background-color: #ffedda; color: black}
 section{padding: 60px 0}
-.container{padding:60px 5px 40px 5px}
+.container{padding:60px 5px 60px 5px}
 .center{text-align: center}
-.row{display: flex; flex-direction: row; flex-wrap: nowrap}
-.row-wrap{display: flex; flex-direction: row; flex-wrap: wrap}
-.column{display: flex; flex-direction: column}
+.row{display: flex; display:flex; flex-direction: row; flex-wrap: nowrap}
+.row-wrap{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around}
+.row-wrap-between{display: flex; display:flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between}
+.column{display: flex; display:flex; flex-direction: column}
 .half{width: 49.99%; padding:0 8px}
+.right{float: right}
+.left{float: left}
+.padding-30{padding: 30px}
+p{text-align: justify}
+
+
+@media only screen
+and (max-device-width: 768px){
+.container{
+    padding: 40px 20px;
+  }
+  .padding-30{
+    padding: 10px;
+  }
+  section{
+    padding: 10px 0;
+  }
+}

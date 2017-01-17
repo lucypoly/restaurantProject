@@ -27,17 +27,6 @@ gulp.task('handlebars', function () {
         ignorePartials: true, // ignores any unknown partials. Useful if you only want to handle part of the file
         // partials : {}, // Javascript object that will fill in partials using strings
         batch: ['app/partials'], // Javascript array of filepaths to use as partials
-        helpers : {
-            galleryPage : function(items, options) {
-                var out = "<div id='galleryPage' class='row-wrap black container'>";
-
-                for(var i=0, l=items.length; i<l; i++) {
-                    out = out + "<a href='javascript:void(0)'><div class='img-wrap'><img src='" + options.fn(items[i]) + "' /></div></a>";
-                }
-
-                return out + "</div><div id='modal_form'><span id='modal_close'>X</span><p id='imgModal'>Hello</p></div><div id='overlay'></div>";
-            }
-        } // javascript functions to stand in for helpers used in the handlebars files
     };
     return gulp.src('app/templates/**/*.hbs')
         .pipe(handlebars(data, options)) // using ./data/data.json file
@@ -52,18 +41,18 @@ gulp.task('img', () =>
     gulp.src('app/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('app/dist/img'))
-    );
+);
 
 
 gulp.task('sass', function () {
     return gulp.src('app/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([flexibility]))
         .pipe(autoprefixer({
             browsers: ['last 4 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(postcss([flexibility]))
         .pipe(gulp.dest('app/dist/css'))
         .pipe(browserSync.stream());
 });
@@ -81,7 +70,7 @@ gulp.task('application-watch', ['js'], function (done) {
 });
 
 
-gulp.task('serve', ['sass', 'js', ], function () {
+gulp.task('serve', ['sass', 'js',], function () {
     browserSync.init({
         server: ['app', 'app/dist']
     });

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+
+<body class="gray">
+<header>
+    {{> navbar}}
+</header>
+
+
+<div id="events" class="content container">
+    <!-- the input fields that will hold the variables we will use -->
+    <input type='hidden' id='current_page'/>
+    <input type='hidden' id='show_per_page'/>
+
+    <div id='content'>
+
+
+        {{#each events}}
+            <div class="event-item">
+                <h1 class="main-info row-wrap-between"><b>{{this.name}}</b> <span>{{this.time}}</span></h1>
+                <div class="row-wrap-between details" style="display: none"><p>{{this.description}}</p><img
+                        src="{{this.imgURL}}"/></div>
+                <hr>
+            </div>
+        {{/each}}
+    </div>
+
+    <div id='page_navigation'></div>
+
+</div>
+
+{{> footer}}
+</body>
+</html>

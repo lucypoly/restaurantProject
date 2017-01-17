@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 {{> head}}
-<body>
+<body class="black">
 <header>
     {{> navbar}}
 </header>
-<section class="black">
+<section>
     <div id="menu" class="content">
         <h1>the menu</h1>
         <div class="menu-heading">
@@ -15,13 +15,44 @@
             <a href="javascript:void(0)" onclick="openMenu(event, 'main');">
                 <div class="menu-category black">Main</div>
             </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'desert');">
-                <div class="menu-category black">Desert</div>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'dessert');">
+                <div class="menu-category black">Dessert</div>
             </a>
         </div>
-        <div id="starter" class="menu content">Starter</div>
-        <div id="main" class="menu content">Main</div>
-        <div id="desert" class="menu content">Desert</div>
+        <div class="white padding-30">
+            <div class="right">
+                <span>Sort by price: </span>
+                <button id="low-to-high-sort">&uarr;</button>
+                <button id="high-to-low-sort">&darr;</button>
+            </div>
+            <div id="starter" class="menu content">
+                {{#each starter}}
+                    <div class="menu-item-starter">
+                        <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>
+                        <p>{{this.description}}</p>
+                        <hr>
+                    </div>
+                {{/each}}
+            </div>
+            <div id="main" class="menu content">
+                {{#each main}}
+                    <div class="menu-item-main">
+                        <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>
+                        <p>{{this.description}}</p>
+                        <hr>
+                    </div>
+                {{/each}}
+            </div>
+            <div id="dessert" class="menu content">
+                {{#each desserts}}
+                    <div class="menu-item-dessert">
+                        <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>
+                        <p>{{this.description}}</p>
+                        <hr>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
     </div>
 </section>
 

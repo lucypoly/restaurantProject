@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+
+<body class="rose">
+<header>
+    {{> navbar}}
+</header>
+<div id="contacts">
+    <div class="container  center">
+        <h1>Contacts</h1>
+        <div class="row-wrap">
+            <div class="text">
+                <address>
+                    Write us: <a href="mailto:webmaster@example.com">webmaster@example.com</a>.<br>
+                    Visit us at:<br>
+                    Kreshchatyk 1, Kyiv<br>
+                    Ukraine<br>
+                    Contact us: <a href="tel:6497257958">6497257958</a>.
+                </address>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p>
+                <p>
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                    enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                </p>
+            </div>
+            <div id="googleMap"></div>
+        </div>
+    </div>
+</div>
+{{> footer}}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdiHH5M6cCZc0JQqfzCEzmeY4afs7hkW4">
+</script>
+<script src="js/map.js"></script>
+</body>
+</html>
