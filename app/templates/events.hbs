@@ -9,6 +9,13 @@
 
 
 <div id="events" class="content container">
+    <div class="filter">Filter:
+        <input type="radio" name="filter-events" id="music" class="radio"><label for="music">Music events</label>
+        <input type="radio" name="filter-events" id="disco" class="radio"><label for="disco">Disco events</label>
+        <input type="radio" name="filter-events" id="games" class="radio"><label for="games">Games events</label>
+        <input type="radio" name="filter-events" id="food" class="radio"><label for="food">Food festivals</label>
+        <input type="radio" checked name="filter-events" id="all" class="radio"><label for="all">All</label>
+    </div>
     <!-- the input fields that will hold the variables we will use -->
     <input type='hidden' id='current_page'/>
     <input type='hidden' id='show_per_page'/>
@@ -17,8 +24,9 @@
 
 
         {{#each events}}
-            <div class="event-item">
-                <h1 class="main-info row-wrap-between"><b>{{this.name}}</b> <span>{{this.time}}</span></h1>
+            <div class="event-item {{this.type}}">
+                <h1 class="main-info row-wrap-between"><b>{{this.name}} ({{this.type}})</b> <span>{{this.time}}</span>
+                </h1>
                 <div class="row-wrap-between details" style="display: none"><p>{{this.description}}</p><img
                         src="{{this.imgURL}}"/></div>
                 <hr>

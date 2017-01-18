@@ -1,65 +1,74 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(document).ready(function(){
+var pagination;
+$(document).ready(function () {
+    pagination = function () {
+        //how much items per page to show
+        var show_per_page = 5;
+        //getting the amount of elements inside content div
+        var number_of_items = $('#content').children().not(':hidden').size();
+        //calculate the number of pages we are going to have
+        var number_of_pages = Math.ceil(number_of_items / show_per_page);
 
-    //how much items per page to show
-    var show_per_page = 5;
-    //getting the amount of elements inside content div
-    var number_of_items = $('#content').children().size();
-    //calculate the number of pages we are going to have
-    var number_of_pages = Math.ceil(number_of_items/show_per_page);
+        //set the value of our hidden input fields
+        $('#current_page').val(0);
+        $('#show_per_page').val(show_per_page);
 
-    //set the value of our hidden input fields
-    $('#current_page').val(0);
-    $('#show_per_page').val(show_per_page);
+        //now when we got all we need for the navigation let's make it '
 
-    //now when we got all we need for the navigation let's make it '
+        /*
+         what are we going to have in the navigation?
+         - link to previous page
+         - links to specific pages
+         - link to next page
+         */
+        var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';
+        var current_link = 0;
+        while (number_of_pages > current_link) {
+            navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+            current_link++;
+        }
+        navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';
 
-    /*
-     what are we going to have in the navigation?
-     - link to previous page
-     - links to specific pages
-     - link to next page
-     */
-    var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';
-    var current_link = 0;
-    while(number_of_pages > current_link){
-        navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
-        current_link++;
-    }
-    navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';
+        $('#page_navigation').html(navigation_html);
 
-    $('#page_navigation').html(navigation_html);
+        //add active_page class to the first page link
+        $('#page_navigation .page_link:first').addClass('active_page');
 
-    //add active_page class to the first page link
-    $('#page_navigation .page_link:first').addClass('active_page');
 
-    //hide all the elements inside content div
-    $('#content').children().css('display', 'none');
+        //hide all the elements inside content div
+        $('#content').children().css('display', 'none');
 
-    //and show the first n (show_per_page) elements
-    $('#content').children().slice(0, show_per_page).css('display', 'block');
+        //and show the first n (show_per_page) elements
+        if ($('#content').find('.toShow').length !== 0) {
+            $('.toShow').slice(0, show_per_page).css('display', 'block');
+        } else {
+            $('#content').children().slice(0, show_per_page).css('display', 'block');
+        }
+    };
+
+    pagination();
 
 });
 
-function previous(){
+function previous() {
 
     new_page = parseInt($('#current_page').val()) - 1;
     //if there is an item before the current active link run the function
-    if($('.active_page').prev('.page_link').length==true){
+    if ($('.active_page').prev('.page_link').length == true) {
         go_to_page(new_page);
     }
 
 }
 
-function next(){
+function next() {
     new_page = parseInt($('#current_page').val()) + 1;
     //if there is an item after the current active link run the function
-    if($('.active_page').next('.page_link').length==true){
+    if ($('.active_page').next('.page_link').length == true) {
         go_to_page(new_page);
     }
 
 }
-function go_to_page(page_num){
+function go_to_page(page_num) {
     //get the number of items shown per page
     var show_per_page = parseInt($('#show_per_page').val());
 
@@ -74,7 +83,7 @@ function go_to_page(page_num){
 
     /*get the page link that has longdesc attribute of the current page and add active_page class to it
      and remove that class from previously active page link*/
-    $('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+    $('.page_link[longdesc=' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
 
     //update the current page input field
     $('#current_page').val(page_num);

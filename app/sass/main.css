@@ -257,6 +257,92 @@ div.label {
   #page_navigation .active_page {
     color: coral; }
 
+.radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0; }
+
+.radio + label {
+  cursor: pointer; }
+
+.radio:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.radio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px; }
+
+.radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: #FFF; }
+
+.radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffedda;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all .2s; }
+
+.radio:checked + label:after {
+  opacity: 1; }
+
+.radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 162, 208, 0.5); }
+
+#reservation {
+  width: 100%;
+  text-align: center;
+  font-family: 'Arsenal', sans-serif; }
+  #reservation #svg-table {
+    border: 1px solid white; }
+  #reservation rect#canvas_background, #reservation rect#scene {
+    cursor: auto; }
+  #reservation rect, #reservation ellipse {
+    cursor: pointer;
+    fill: darkcyan; }
+  #reservation rect#canvas_background {
+    fill: black; }
+  #reservation .booking-table input, #reservation .booking-table button, #reservation .booking-table input[type="date"] {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    width: 50%;
+    font-size: 20px;
+    margin: 5px 0;
+    color: gray; }
+  #reservation .booking-table button {
+    background-color: darkcyan;
+    color: white;
+    font-size: 20px;
+    margin: 5px 0;
+    cursor: pointer; }
+  #reservation .booking-table select {
+    padding: 5px 10px;
+    border: none;
+    outline: 0;
+    font-size: 20px;
+    margin: 5px 5px;
+    color: gray; }
+
+@media only screen and (max-device-width: 768px) {
+  #reservation .booking-table input, #reservation .booking-table button, #reservation .booking-table input[type="date"] {
+    width: 90%;
+    text-align: center; } }
 body, html {
   height: 100%;
   width: 100%;

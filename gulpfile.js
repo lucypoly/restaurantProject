@@ -75,7 +75,7 @@ gulp.task('serve', ['sass', 'js',], function () {
         server: ['app', 'app/dist']
     });
 
-    gulp.watch(['app/sass/main.scss'], ['sass']);
+    gulp.watch(['app/sass/*.scss'], ['sass']);
     gulp.watch('app/js/*.js', ['application-watch']);
     gulp.watch(['app/dist/*.html']).on('change', browserSync.reload);
     gulp.watch(['app/templates/**'], ['handlebars']);

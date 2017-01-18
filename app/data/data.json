@@ -140,71 +140,79 @@
     {
       "name": "event1",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL" : "https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr=1&auto=compress,format&fit=crop&w=1199&h=763&q=80&cs=tinysrgb&crop="
+      "time": "30/03/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr=1&auto=compress,format&fit=crop&w=1199&h=763&q=80&cs=tinysrgb&crop=",
+      "type" : "Music"
     },
     {
       "name": "event2",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL" : "https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop="
+      "time": "29/03/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop=",
+      "type" : "Games"
     },
     {
       "name": "event3",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="
+      "time": "28/03/2017 at 22:00",
+      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      "type" : "Disco"
     },
     {
       "name": "event4",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="
+      "time": "22/03/2017 at 22:00",
+      "imgURL": "https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      "type" : "Food"
     },
     {
       "name": "event5",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL" : "https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr=1&auto=compress,format&fit=crop&w=1199&h=763&q=80&cs=tinysrgb&crop="
-
+      "time": "15/03/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr=1&auto=compress,format&fit=crop&w=1199&h=763&q=80&cs=tinysrgb&crop=",
+      "type" : "Music"
     },
     {
       "name": "event6",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL" : "https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop="
-
+      "time": "08/03/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop=",
+      "type" : "Games"
     },
     {
       "name": "event7",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="
-
+      "time": "20/02/2017 at 22:00",
+      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      "type" : "Food"
     },
     {
       "name": "event8",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="
-
+      "time": "14/02/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468231300737-ecd13d75ce6f?dpr=1&auto=compress,format&fit=crop&w=1199&h=763&q=80&cs=tinysrgb&crop=",
+      "type" : "Music"
     },
     {
       "name": "event9",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="
-
+      "time": "07/02/2017 at 22:00",
+      "imgURL" : "https://images.unsplash.com/photo-1468234847176-28606331216a?dpr=1&auto=compress,format&fit=crop&w=1199&h=591&q=80&cs=tinysrgb&crop=",
+      "type" : "Games"
     },
     {
       "name": "event10",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00"
+      "time": "30/01/2017 at 22:00",
+      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      "type" : "Disco"
     },
     {
       "name": "event11",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "08/01/2017 at 22:00"
+      "time": "15/01/2017 at 22:00",
+      "imgURL": "https://images.unsplash.com/photo-1466150036782-869a824aeb25?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+      "type" : "Food"
     }
   ]
 }

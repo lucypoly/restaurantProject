@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body class="black">
+<header>
+    {{> navbar}}
+</header>
+<div id="reservation" class="content container">Please, choose table and then select date and time:<br>
+    <svg id="svg-table" width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+        <g>
+            <title>background</title>
+            <rect fill="black" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+            <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+            </g>
+        </g>
+        <g>
+            <title>Layer 1</title>
+            <rect class="table" id="table1" height="61" width="42" y="22.5" x="98.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table2" height="61" width="42" y="23.5" x="228.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table3" height="61" width="42" y="21.5" x="356.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table4" height="61" width="42" y="20.5" x="476.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table5" height="42" width="74" y="143.5" x="485.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table6" height="42" width="74" y="238.5" x="486.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000"/>
+            <rect class="table" id="table7" height="51" width="153" y="134.5" x="37.5" fill-opacity="null" stroke-opacity="null"
+                  stroke-width="1.5" stroke="#000"/>
+            <rect class="table" id="table8" height="51" width="155" y="233.5" x="38.5" fill-opacity="null" stroke-opacity="null"
+                  stroke-width="1.5" stroke="#000"/>
+            <ellipse class="table" ry="28" rx="31" id="table9" cy="157.5" cx="280.5" fill-opacity="null" stroke-opacity="null"
+                     stroke-width="1.5" stroke="#000"/>
+            <ellipse class="table" ry="28" rx="31" id="table10" cy="156.5" cx="395.5" fill-opacity="null" stroke-opacity="null"
+                     stroke-width="1.5" stroke="#000"/>
+            <ellipse class="table" ry="28" rx="31" id="table11" cy="253.5" cx="286.5" fill-opacity="null" stroke-opacity="null"
+                     stroke-width="1.5" stroke="#000"/>
+            <ellipse class="table" ry="28" rx="31" id="table12" cy="253.5" cx="399.5" fill-opacity="null" stroke-opacity="null"
+                     stroke-width="1.5" stroke="#000"/>
+            <rect id="scene" height="53" width="229" y="341.5" x="190.5" stroke-opacity="null" stroke-width="1.5"
+                  stroke="#000" fill="#d4aaff"/>
+            <text stroke="#000" transform="matrix(1,0,0,0.8668380989147302,0,61.237459061881225) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_25" y="359.5" x="237.5" stroke-opacity="null" stroke-width="0" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start"  id="svg_27" y="375.5" x="276.5" stroke-opacity="null" stroke-width="0" stroke="white" fill="white">Stage</text>
+        </g>
+    </svg>
+
+    <form class="booking-table">
+        <input id="name" type="text" placeholder="Name"><br>
+        <input id="number" type="text" placeholder="Number"><br>
+        <input id="date" type="date" placeholder="Date"><br>
+        Time from: <select id="start">
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+    </select>
+        To: <select id="end">
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+    </select><br>
+        <button id="book" type="submit">Reserve</button>
+    </form>
+</div>
+<script src="js/reservation.js"></script>
+
+{{> footer}}
+
+</body>
+</html>
