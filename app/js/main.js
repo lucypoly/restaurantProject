@@ -7,21 +7,11 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    $('.bxslider').bxSlider({
-        adaptiveHeight: true
-    });
-});
-
-$(document).ready(function () {
     var current = location.pathname.split('/');
     current = current[current.length - 1].split('.');
     var id = current[0];
     $('#' + id).addClass('highlight_stay');
 });
-
-
-
-
 
 
 $(document).ready(function () {
@@ -60,4 +50,12 @@ $(document).ready(function () {
     });
 });
 
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 

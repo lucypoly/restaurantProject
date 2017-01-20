@@ -6,7 +6,7 @@
 @import "contacts.scss";
 @import "events.scss";
 @import "reservation.scss";
-
+@import "index.scss";
 
 body, html {height: 100%; width:100%; color: black;  margin:0; padding:0;} body{font-size: 24px}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
@@ -20,15 +20,19 @@ h1{font-size: 48px; text-transform: uppercase; margin: 0; padding: 20px 0}
 section{padding: 60px 0}
 .container{padding:60px 5px 60px 5px}
 .center{text-align: center}
-.row{display: flex; display:flex; flex-direction: row; flex-wrap: nowrap}
+.row{display: flex; flex-direction: row; flex-wrap: nowrap}
 .row-wrap{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around}
-.row-wrap-between{display: flex; display:flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between}
-.column{display: flex; display:flex; flex-direction: column}
-.half{width: 49.99%; padding:0 8px}
+.row-wrap-between{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between}
+.column{display: flex;  flex-direction: column}
+.half{width: 45%; padding:0 8px}
 .right{float: right}
 .left{float: left}
 .padding-30{padding: 30px}
+.margin-20{margin: 0 20px}
 p{text-align: justify}
+.inline{display: inline-block;}
+.rounded{border-radius: 50%;
+}
 
 
 @media only screen
@@ -41,5 +45,14 @@ and (max-device-width: 768px){
   }
   section{
     padding: 10px 0;
+  }
+  .half{
+    width: 100%;
+  }
+  .left{
+    float: none;
+  }
+  .right{
+    float: none;
   }
 }

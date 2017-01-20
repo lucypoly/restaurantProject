@@ -1,5 +1,4 @@
-ul.navbar {
-  width: 100%;
+ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -15,27 +14,31 @@ ul.navbar {
   &:hover {
     opacity: 1;
   }
-  .highlight_stay{
+  .highlight_stay {
     background-color: darkcyan;
   }
-  li.menu-item {
-    float: left;
-    position: relative;
-    &:not(:first-child){
-      border-left: 1px solid #ccc;
-    }
-    a {
-      display: inline-block;
-      color: white;
-      text-align: center;
-      padding: 8px 16px;
-      text-decoration: none;
-      font-size: 24px;
-      &:hover {
-        background-color: #ccc;
-      }
-    }
-  }
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 24px;
+}
+
+ul.topnav li a:hover {
+  background-color: darkcyan;
+}
+
+ul.topnav li.icon {
+  display: none;
 }
 
 .dropbtn {
@@ -66,17 +69,73 @@ li.dropdown {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    li{
+      float: none;
+      display: block;
+    }
     li:hover {
-      background-color: #ccc;
+      background-color: darkcyan;
     }
     a {
       padding: 8px 12px;
       text-decoration: none;
       display: block;
-      text-align: left;
+      font-size: 24px;
+      float: none;
       &:hover {
         color: black;
       }
     }
+  }
+}
+@media only screen
+and (max-device-width: 768px){
+  ul.topnav{
+    height: auto;
+  }
+  ul.topnav li a{
+    font-size: 60px;
+  }
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media only screen
+and (max-device-width: 768px){
+  #clients-href{
+    display: none;
+  }
+  li.dropdown .dropdown-content{
+    display: block;
+    background-color: #333;
+    width: 100%;
+    a{
+      width: 100%;
+    }
+  }
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+  }
+  ul.topnav.responsive li, .dropdown-content li {
+    float: none;
+    background-color: #333;
+    display: inline;
+    z-index: 4;
+  }
+  ul.topnav.responsive li a, .dropdown-content li a {
+    display: block;
+    text-align: left;
+    z-index: 4;
+    font-size: 60px;
+
   }
 }

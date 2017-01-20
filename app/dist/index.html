@@ -3,7 +3,6 @@
 <head>
     <title>lucy's restaurant</title>
     <link rel="icon" href="../img/favicon.ico">
-    <script src="../lib/flex.js"></script>
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
     <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
@@ -13,26 +12,28 @@
             crossorigin="anonymous"></script>
     <script src="../lib/slider/jquery.bxslider.min.js"></script>
     <script src="../lib/handlebars-v4.0.5.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/pagination.js"></script>
     <script src="js/main.js"></script>
-    <!--&lt;!&ndash;[if lt IE 9]>-->
-    <!--<link rel="stylesheet" href="../sass/ie.css" />-->
-    <!--<![endif]&ndash;&gt;-->
+    <!--[if lt IE 9]>
+    <link href="../lib/ie.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+    <script src="../lib/flex.js"></script>
 </head><body>
 <header>
-    <ul class="navbar row">
+    <ul class="topnav" id="myTopnav">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
         <li class="menu-item" id="gallery"><a href="gallery.html">Gallery</a></li>
         <li class="dropdown menu-item" id="clients">
-            <a href="javascript:void(0)" class="dropbtn">For clients</a>
-            <ul class="dropdown-content column">
+            <a href="javascript:void(0)" class="dropbtn" id="clients-href">For clients</a>
+            <ul class="dropdown-content">
                 <li class="submenu-item"><a href="menu.html">Menu</a></li>
                 <li class="submenu-item"><a href="contacts.html">Contacts</a></li>
                 <li class="submenu-item"><a href="reservation.html">Reservation</a></li>
                 <li class="submenu-item"><a href="events.html">Events</a></li>
             </ul>
+        </li>
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="myFunction()">☰</a>
         </li>
     </ul>
 
@@ -47,8 +48,8 @@
         </ul>
     </div>
 </header>
-<div class="container rose" id="about">
-    <div class="content">
+<div class="container parallax about" id="about">
+    <div class="content half left">
         <h1 class="center">About</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -61,24 +62,62 @@
             elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
             eleifend ac, enim.
         </p>
-        <p>
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-            laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-            nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-            sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
-            Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis
-            ante. Etiam sit amet orci eget
-        </p>
+    </div>
+</div>
+<div class="container blue">
+    <div class="inline half center hours">
         <h1><b>Opening Hours</b></h1>
-
-        <div class="row">
-        <div class="half">
-                <p>Monday - Sunday 11:00 - 24:00</p>
+        <p class="center">Monday - Sunday 11:00 - 24:00</p>
+        <p class="center">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+            consequat vitae,
+            eleifend ac, enim. ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+    </div>
+    <div class="inline half center dishes">
+        <h1><b>Try new dishes!</b></h1>
+        <img class="rounded margin-20" width="200px" src="../img/recom-1.jpg">
+        <img class="rounded margin-20" width="200px" src="../img/recom-2.jpg">
+    </div>
+</div>
+<div class="container parallax stars">
+    <div class="content center">
+        <h1>Our stars</h1>
+        <div class="thumb">
+            <img width="200px" class="rounded" src="../img/chief-1.jpg"/>
+            <div class="caption">
+                <h2>chief 1</h2>
+                <h3>In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo.</h3>
+            </div>
+        </div>
+        <div class="thumb">
+            <img width="200px" class="rounded" src="../img/chief-2.jpg"/>
+            <div class="caption">
+                <h2>chief 2</h2>
+                <h3>In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo.</h3>
+            </div>
+        </div>
+        <div class="thumb">
+            <img width="200px" class="rounded" src="../img/chief-3.jpg"/>
+            <div class="caption">
+                <h2>chief 3</h2>
+                <h3>In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo.</h3>
             </div>
         </div>
     </div>
 </div>
 <footer>
     2017, by Lucy
-</footer></body>
+</footer><script>
+    $(document).ready(function () {
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true
+        });
+    });
+</script>
+</body>
 </html>

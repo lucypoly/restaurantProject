@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -7,7 +6,6 @@ const livereload = require('gulp-livereload');
 const browserSync = require('browser-sync').create();
 const browserify = require('gulp-browserify');
 const imagemin = require('gulp-imagemin');
-const imageResize = require('gulp-image-resize');
 const handlebars = require('gulp-compile-handlebars');
 const fs = require('fs');
 const rename = require("gulp-rename");

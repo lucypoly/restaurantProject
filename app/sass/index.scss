@@ -1,0 +1,56 @@
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  background-image: url("../img/bg-1.jpg");
+  background-size: cover;
+}
+
+.stars {
+  background-image: url('../img/bg-2.jpg');
+  background-size: cover;
+  h1{
+    color: #ffeffa;
+  }
+}
+
+.thumb {
+  width: 250px;
+  display: inline-block;
+  padding-top: 30px;
+  text-align: center;
+  background-color: #ffeffa;
+  transition: 0.3s;
+  margin: 20px;
+  &:hover {
+    background-color: darkcyan;
+    .caption {
+      color: white;
+    }
+  }
+  .caption {
+    transition: 0.3s;
+    padding: 18px 40px;
+    color: #340c0c;
+    h2 {
+      margin: 0;
+    }
+    h2 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .thumb {
+    width: 95%;
+  }
+
+}

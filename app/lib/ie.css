@@ -1,0 +1,37 @@
+footer {
+  background-color: #333;
+  height: auto;
+  color: white; }
+
+.img-wrap {
+  display: inline-block; }
+
+.logo {
+  background-color: gray; }
+
+#galleryPage a {
+  display: inline-block; }
+
+.filter input{
+  margin: 6px 8px;
+}
+
+.details p{
+  width: 95%;
+}
+
+.details img{
+  width: 95%;
+}
+
+#menu .menu-heading .menu-category{
+  display: inline-block;
+  width: 33.1%;
+  padding: 12px 0;
+}
+
+.menu.content p{
+  text-align: center;
+  padding: 0;
+}
+/*# sourceMappingURL=ie.css.map */

@@ -25,9 +25,14 @@ document.querySelector('#date').addEventListener('blur', function (e) {
 
     var selectedDate = e.target.value;
     if (new Date() >= new Date(selectedDate)) {
-        alert('Please, select future date');
+        document.getElementById('invalid-future').style.display = 'inline-block';
+        document.getElementById('invalid-future').innerHTML = "Please, select a future date!";
         return;
+    } else {
+        document.getElementById('invalid-future').style.display = 'none';
     }
+
+
     if (currentTable.hasOwnProperty(selectedDate)) {
         var bookedHours = [];
         for (var key in currentTable[selectedDate]) {
@@ -86,9 +91,14 @@ document.querySelector('#start').addEventListener('blur', function (event) {
 document.querySelector('#book').addEventListener('click', function (e) {
     e.preventDefault();
     if (!currentTable.name) {
-        alert('Please, select a table');
+        document.getElementById('invalid-table').style.display = 'inline-block';
+        document.getElementById('invalid-table').innerHTML = "Please select a table";
         return;
+    } else {
+        document.getElementById('invalid-table').style.display = 'none';
     }
+
+
     var currentBooking = {
         name: document.querySelector('#name').value,
         number: document.querySelector('#number').value,
@@ -114,4 +124,36 @@ $(document).ready(function () {
         $('.table').css('fill', 'darkcyan');
     });
 });
+
+
+function checkNumber(str) {
+    var pattern = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)?\d{2}(-|\s)?\d{2}$/;
+    if (!pattern.test(str)) {
+        document.getElementById('invalid-number').style.display = 'inline-block';
+        document.getElementById('invalid-number').innerHTML = "Please enter a valid phone number in format 0501234567";
+    } else {
+        document.getElementById('invalid-number').style.display = 'none';
+    }
+}
+
+function checkName(str) {
+    if (!str) {
+        document.getElementById('invalid-name').style.display = 'inline-block';
+        document.getElementById('invalid-name').innerHTML = "Please enter your name";
+    } else {
+        document.getElementById('invalid-name').style.display = 'none';
+    }
+}
+
+function checkDate(str) {
+    var pattern = /^((19|20)?[0-9]{2}[-](0?[1-9]|1[012])[-](0?[1-9]|[12][0-9]|3[01]))*$/;
+    if (!pattern.test(str)) {
+        document.getElementById('invalid-date').style.display = 'inline-block';
+        document.getElementById('invalid-date').innerHTML = "Please enter a valid date in format yyyy-mm-dd. ";
+    } else {
+        document.getElementById('invalid-date').style.display = 'none';
+    }
+}
+
+
 

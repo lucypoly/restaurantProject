@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/lucypoly/restaurantProject#readme",
   "devDependencies": {
-    "angularjs-ie8-build": "^1.4.7",
     "browser-sync": "^2.18.5",
     "browserify": "^13.1.1",
     "es5-shim": "^4.5.9",
@@ -32,13 +31,11 @@
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-compile-handlebars": "^0.6.1",
-    "gulp-image-resize": "^0.11.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1",
     "jquery-1x": "^1.12.1",
     "postcss-flexibility": "^1.1.0"
   }

@@ -1,6 +1,5 @@
 @charset "UTF-8";
-ul.navbar {
-  width: 100%;
+ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -13,24 +12,28 @@ ul.navbar {
   left: 0;
   height: 46px;
   z-index: 4; }
-  ul.navbar:hover {
+  ul.topnav:hover {
     opacity: 1; }
-  ul.navbar .highlight_stay {
+  ul.topnav .highlight_stay {
     background-color: darkcyan; }
-  ul.navbar li.menu-item {
-    float: left;
-    position: relative; }
-    ul.navbar li.menu-item:not(:first-child) {
-      border-left: 1px solid #ccc; }
-    ul.navbar li.menu-item a {
-      display: inline-block;
-      color: white;
-      text-align: center;
-      padding: 8px 16px;
-      text-decoration: none;
-      font-size: 24px; }
-      ul.navbar li.menu-item a:hover {
-        background-color: #ccc; }
+
+ul.topnav li {
+  float: left; }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 24px; }
+
+ul.topnav li a:hover {
+  background-color: darkcyan; }
+
+ul.topnav li.icon {
+  display: none; }
 
 .dropbtn {
   display: inline-block;
@@ -55,16 +58,64 @@ li.dropdown {
     list-style-type: none;
     margin: 0;
     padding: 0; }
+    li.dropdown .dropdown-content li {
+      float: none;
+      display: block; }
     li.dropdown .dropdown-content li:hover {
-      background-color: #ccc; }
+      background-color: darkcyan; }
     li.dropdown .dropdown-content a {
       padding: 8px 12px;
       text-decoration: none;
       display: block;
-      text-align: left; }
+      font-size: 24px;
+      float: none; }
       li.dropdown .dropdown-content a:hover {
         color: black; }
 
+@media only screen and (max-device-width: 768px) {
+  ul.topnav {
+    height: auto; }
+
+  ul.topnav li a {
+    font-size: 60px; }
+
+  ul.topnav li:not(:first-child) {
+    display: none; }
+
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block; } }
+@media only screen and (max-device-width: 768px) {
+  #clients-href {
+    display: none; }
+
+  li.dropdown .dropdown-content {
+    display: block;
+    background-color: #333;
+    width: 100%; }
+    li.dropdown .dropdown-content a {
+      width: 100%; }
+
+  ul.topnav.responsive {
+    position: relative; }
+
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4; }
+
+  ul.topnav.responsive li, .dropdown-content li {
+    float: none;
+    background-color: #333;
+    display: inline;
+    z-index: 4; }
+
+  ul.topnav.responsive li a, .dropdown-content li a {
+    display: block;
+    text-align: left;
+    z-index: 4;
+    font-size: 60px; } }
 footer {
   width: 100%;
   margin: 0;
@@ -94,7 +145,7 @@ div.label {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 8vw;
+  font-size: 60px;
   text-transform: uppercase;
   color: bisque;
   padding: 5px;
@@ -175,7 +226,7 @@ div.label {
   /* ╤З╤Вo╨▒╤Л o╨║╨╜o ╨▒╤Л╨╗o ╨▓ ╨▓╨╕╨┤╨╕╨╝o╨╣ ╨╖o╨╜╨╡ ╨▓ ╨╗╤О╨▒o╨╝ ╨╝╨╡╤Б╤В╨╡ */
   top: 60px;
   /* o╤В╤Б╤В╤Г╨┐a╨╡╨╝ ╤Б╨▓╨╡╤А╤Е╤Г 45%, o╤Б╤Вa╨╗╤М╨╜╤Л╨╡ 5% ╨┐o╨┤╨▓╨╕╨╜╨╡╤В ╤Б╨║╤А╨╕╨┐╤В */
-  left: calc(20%/2);
+  left: 10%;
   margin: 0 auto;
   display: none;
   /* ╨▓ o╨▒╤Л╤З╨╜o╨╝ ╤Бo╤Б╤Вo╤П╨╜╨╕╨╕ o╨║╨╜a ╨╜╨╡ ╨┤o╨╗╨╢╨╜o ╨▒╤Л╤В╤М */
@@ -186,7 +237,7 @@ div.label {
   padding: 20px 10px; }
   #modal_form img {
     width: 95%;
-    margin-left: calc(5%/2); }
+    margin-left: 2; }
 
 /* ╨Ъ╨╜o╨┐╨║a ╨╖a╨║╤А╤Л╤В╤М ╨┤╨╗╤П ╤В╨╡╤Е ╨║╤Вo ╨▓ ╤Вa╨╜╨║╨╡) */
 #modal_form #modal_close {
@@ -324,13 +375,15 @@ div.label {
     width: 50%;
     font-size: 20px;
     margin: 5px 0;
-    color: gray; }
+    color: gray;
+    background-color: white; }
   #reservation .booking-table button {
     background-color: darkcyan;
     color: white;
     font-size: 20px;
     margin: 5px 0;
-    cursor: pointer; }
+    cursor: pointer;
+    display: inline-block; }
   #reservation .booking-table select {
     padding: 5px 10px;
     border: none;
@@ -338,11 +391,58 @@ div.label {
     font-size: 20px;
     margin: 5px 5px;
     color: gray; }
+  #reservation .booking-table .error {
+    color: coral;
+    font-size: 18px;
+    display: none; }
 
 @media only screen and (max-device-width: 768px) {
   #reservation .booking-table input, #reservation .booking-table button, #reservation .booking-table input[type="date"] {
     width: 90%;
     text-align: center; } }
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.about {
+  background-image: url("../img/bg-1.jpg");
+  background-size: cover; }
+
+.stars {
+  background-image: url("../img/bg-2.jpg");
+  background-size: cover; }
+  .stars h1 {
+    color: #ffeffa; }
+
+.thumb {
+  width: 250px;
+  display: inline-block;
+  padding-top: 30px;
+  text-align: center;
+  background-color: #ffeffa;
+  transition: 0.3s;
+  margin: 20px; }
+  .thumb:hover {
+    background-color: darkcyan; }
+    .thumb:hover .caption {
+      color: white; }
+  .thumb .caption {
+    transition: 0.3s;
+    padding: 18px 40px;
+    color: #340c0c; }
+    .thumb .caption h2 {
+      margin: 0; }
+    .thumb .caption h2 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1.1; }
+
+@media only screen and (max-device-width: 768px) {
+  .thumb {
+    width: 95%; } }
 body, html {
   height: 100%;
   width: 100%;
@@ -397,7 +497,6 @@ section {
 
 .row {
   display: flex;
-  display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
 
@@ -409,18 +508,16 @@ section {
 
 .row-wrap-between {
   display: flex;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .column {
   display: flex;
-  display: flex;
   flex-direction: column; }
 
 .half {
-  width: 49.99%;
+  width: 45%;
   padding: 0 8px; }
 
 .right {
@@ -432,8 +529,17 @@ section {
 .padding-30 {
   padding: 30px; }
 
+.margin-20 {
+  margin: 0 20px; }
+
 p {
   text-align: justify; }
+
+.inline {
+  display: inline-block; }
+
+.rounded {
+  border-radius: 50%; }
 
 @media only screen and (max-device-width: 768px) {
   .container {
@@ -443,6 +549,15 @@ p {
     padding: 10px; }
 
   section {
-    padding: 10px 0; } }
+    padding: 10px 0; }
+
+  .half {
+    width: 100%; }
+
+  .left {
+    float: none; }
+
+  .right {
+    float: none; } }
 
 /*# sourceMappingURL=main.css.map */
