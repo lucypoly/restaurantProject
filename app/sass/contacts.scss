@@ -33,8 +33,6 @@
     padding: 10px 20px 30px 20px;
     max-width:50%;
     border-radius:7px;
-    -webkit-border-radius:7px;
-    -moz-border-radius:7px;
     margin-bottom: 60px;
     font-family: 'Arsenal', sans-serif;
 
@@ -50,8 +48,6 @@
     width:100%;
     background: #fff;
     border: 0;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     margin-bottom: 25px;
     padding: 5px;
@@ -76,8 +72,6 @@
   }
   #contact-form button[type="submit"]:hover {
     background-color: #004d4d;
-    -webkit-transition:background 0.3s ease-in-out;
-    -moz-transition:background 0.3s ease-in-out;
     transition:background-color 0.3s ease-in-out;
   }
   #contact-form button[type="submit"]:active {
@@ -85,9 +79,6 @@
   }
   input:required, textarea:required {
     box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -o-box-shadow: none;
   }
   #contact-form .required {
     font-weight:bold;
