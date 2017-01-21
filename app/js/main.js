@@ -15,34 +15,20 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    $('input#music').on('click', function () {
-        $('div.event-item').not('.Music').hide();
-        $('div.event-item').not('.Music').removeClass('toShow');
-        $('div.event-item.Music').show();
-        $('div.event-item.Music').addClass('toShow');
-        pagination();
-    });
-    $('input#food').on('click', function () {
-        $('div.event-item').not('.Food').hide();
-        $('div.event-item').not('.Food').removeClass('toShow');
-        $('div.event-item.Food').show();
-        $('div.event-item.Food').addClass('toShow');
-        pagination();
-    });
-    $('input#disco').on('click', function () {
-        $('div.event-item').not('.Disco').hide();
-        $('div.event-item').not('.Disco').removeClass('toShow');
-        $('div.event-item.Disco').show();
-        $('div.event-item.Disco').addClass('toShow');
-        pagination();
-    });
-    $('input#games').on('click', function () {
-        $('div.event-item').not('.Games').hide();
-        $('div.event-item').not('.Games').removeClass('toShow');
-        $('div.event-item.Games').show();
-        $('div.event-item.Games').addClass('toShow');
-        pagination();
-    });
+    function filtrationEvent(inputId, elementClass) {
+        $('input#' + inputId).on('click', function () {
+            $('div.event-item').not('.' + elementClass).hide();
+            $('div.event-item').not('.' + elementClass).removeClass('toShow');
+            $('div.event-item.' + elementClass).show();
+            $('div.event-item.' + elementClass).addClass('toShow');
+            pagination();
+        });
+    }
+    filtrationEvent('music', 'Music');
+    filtrationEvent('food', 'Food');
+    filtrationEvent('disco', 'Disco');
+    filtrationEvent('games', 'Games');
+
     $('input#all').on('click', function () {
         $('div.event-item').removeClass('toShow');
         $('div.event-item').show();
@@ -50,7 +36,7 @@ $(document).ready(function () {
     });
 });
 
-function myFunction() {
+function menuCollapse() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
@@ -58,4 +44,8 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+window.onload = function () {
+    window.scrollTo(0,0);
+};
 
