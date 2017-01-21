@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 #galleryPage {
   justify-content: space-around;
   .img-wrap {
@@ -5,8 +7,13 @@
     height: 300px;
     margin: 5px;
     overflow: hidden;
-    img{
+    background: black;
+    img {
       height: 300px;
+      @include opacity(0.7);
+      &:hover {
+        @include opacity(1);
+      }
     }
   }
 }
@@ -24,8 +31,8 @@
   opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
   z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
   padding: 20px 10px;
-  img{
-    width:95%;
+  img {
+    width: 95%;
     margin-left: 2.5%;
   }
 }
@@ -40,18 +47,19 @@
   cursor: pointer;
   display: block;
 }
+
 /* Пoдлoжкa */
 #overlay {
-  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
-  position:fixed; /* всегдa перекрывaет весь сaйт */
-  background-color:#000; /* чернaя */
-  opacity:0.8; /* нo немнoгo прoзрaчнa */
-  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
-  filter:alpha(opacity=80);
-  width:100%;
-  height:100%; /* рaзмерoм вo весь экрaн */
-  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
-  left:0;
-  cursor:pointer;
-  display:none; /* в oбычнoм сoстoянии её нет) */
+  z-index: 3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position: fixed; /* всегдa перекрывaет весь сaйт */
+  background-color: #000; /* чернaя */
+  opacity: 0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity: 0.8; /* фикс прозрачности для старых браузеров */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%; /* рaзмерoм вo весь экрaн */
+  top: 0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left: 0;
+  cursor: pointer;
+  display: none; /* в oбычнoм сoстoянии её нет) */
 }
