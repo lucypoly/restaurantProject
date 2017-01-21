@@ -67,73 +67,73 @@
   ],
   "starter": [
     {
-      "name": "chicken",
+      "name": "starter1",
       "price": 19,
-      "description": "njhdxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "starter2",
       "price": 18,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "starter3",
       "price": 10,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "starter4",
       "price": 5,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "starter5",
       "price": 32,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     }
   ],
   "main": [
     {
-      "name": "chicken",
+      "name": "main1",
       "price": 17,
-      "description": "njhdxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "main2",
       "price": 18,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "chicken",
+      "name": "main3",
       "price": 28,
-      "description": "njhdxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "main4",
       "price": 4,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     }
   ],
   "desserts": [
     {
-      "name": "chicken",
+      "name": "desserts1",
       "price": 4,
-      "description": "njhdxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "desserts2",
       "price": 118,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "chicken",
+      "name": "desserts3",
       "price": 32,
-      "description": "njhdxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
-      "name": "salad2",
+      "name": "desserts4",
       "price": 77,
-      "description": "njhdtgrtgxbwvw"
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     }
   ],
   "events": [

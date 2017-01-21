@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
     <title>lucy's restaurant</title>
     <link rel="icon" href="../img/favicon.ico">
     <link href="css/main.css" rel="stylesheet">
@@ -13,13 +12,14 @@
     <script src="../lib/slider/jquery.bxslider.min.js"></script>
     <script src="../lib/handlebars-v4.0.5.js"></script>
     <script src="js/main.js"></script>
+    <script src="../lib/flex.js"></script>
+
     <!--[if lt IE 9]>
     <link href="../lib/ie.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
-    <script src="../lib/flex.js"></script>
-</head>
-<body class="rose">
+
+<body id="contactPage">
 <header>
     <ul class="topnav" id="myTopnav">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
@@ -39,26 +39,43 @@
     </ul>
 </header>
 <div id="contacts">
-    <div class="container  center">
-        <h1>Contacts</h1>
+    <div class="container center">
+        <h1>You can find us in Kyiv, 1 Kreshchatyk!</h1>
         <div class="row-wrap">
-            <div class="text">
-                <address>
-                    Write us: <a href="mailto:webmaster@example.com">webmaster@example.com</a>.<br>
-                    Visit us at:<br>
-                    Kreshchatyk 1, Kyiv<br>
-                    Ukraine<br>
-                    Contact us: <a href="tel:6497257958">6497257958</a>.
-                </address>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                </p>
-                <p>
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-                    enim.
-                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                </p>
+            <div id="contact-form">
+                <div>
+                    <h1>Contact us</h1>
+                </div>
+                <p id="failure">Oopsie...message not sent.</p>
+                <p id="success">Your message was sent successfully. Thank you!</p>
+
+                <form method="post" action="/">
+                    <div>
+                        <label for="name">
+                            <span class="required">Name: *</span>
+                            <input type="text" id="name" name="name" value="" placeholder="Your Name"
+                                   required="required" tabindex="1" autofocus="autofocus"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="email">
+                            <span class="required">Email: *</span>
+                            <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2"
+                                   required="required"/>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="message">
+                            <span class="required">Message: *</span>
+                            <textarea id="message" name="message" placeholder="Please write your message here."
+                                      tabindex="5" required="required"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <button name="submit" type="submit" id="submit">SEND</button>
+                    </div>
+                </form>
+
             </div>
             <div id="googleMap"></div>
         </div>

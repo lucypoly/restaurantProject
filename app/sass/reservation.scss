@@ -1,62 +1,73 @@
-#reservation {
-  width: 100%;
-  text-align: center;
-  font-family: 'Arsenal', sans-serif;
-  #svg-table {
-    border: 1px solid white;
+#reservationPage{
+  .svg-table {
+    background-image: url("../img/bg-5.jpg");
+    background-size: cover;
+    background-position: top;
   }
-  rect#canvas_background, rect#scene {
-    cursor: auto;
+  .booking-form{
+    background-color: #333333;
   }
-  rect, ellipse {
-    cursor: pointer;
-    fill: darkcyan;
-  }
-  rect#canvas_background {
-    fill: black;
-  }
-  .booking-table {
-    input, button, input[type="date"] {
-      padding: 8px 16px;
-      border: none;
-      outline: none;
-      width: 50%;
-      font-size: 20px;
-      margin: 5px 0;
-      color: gray;
-      background-color: white;
-    }
-    button {
-      background-color: darkcyan;
-      color: white;
-      font-size: 20px;
-      margin: 5px 0;
-      cursor: pointer;
-      display: inline-block;
-    }
-    select {
-      padding: 5px 10px;
-      border: none;
-      outline: 0;
-      font-size: 20px;
-      margin: 5px 5px;
-      color: gray;
-    }
-    .error{
-      color: coral;
-      font-size: 18px;
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-device-width: 768px) {
   #reservation {
+    width: 100%;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    #svg-table {
+      border: 1px solid white;
+    }
+    rect#canvas_background, rect#scene {
+      cursor: auto;
+    }
+    rect, ellipse {
+      cursor: pointer;
+      fill: darkcyan;
+    }
+    rect#canvas_background {
+      fill: transparent;
+    }
     .booking-table {
       input, button, input[type="date"] {
-        width: 90%;
-        text-align: center;
+        padding: 8px 16px;
+        border: none;
+        outline: none;
+        width: 50%;
+        font-size: 20px;
+        margin: 5px 0;
+        color: gray;
+        background-color: white;
+      }
+      button {
+        background-color: darkcyan;
+        color: white;
+        font-size: 20px;
+        margin: 5px 0;
+        cursor: pointer;
+        display: inline-block;
+      }
+      select {
+        padding: 5px 10px;
+        border: none;
+        outline: 0;
+        font-size: 20px;
+        margin: 5px 5px;
+        color: gray;
+      }
+      .error{
+        color: coral;
+        font-size: 18px;
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 768px) {
+    #reservation {
+      .booking-table {
+        input, button, input[type="date"] {
+          width: 90%;
+          text-align: center;
+        }
       }
     }
   }
 }
+

@@ -1,43 +1,33 @@
-$(document).ready(function () {
-    $("#selected").click().children().removeClass('black').addClass('blue');
 
-    $('#low-to-high-sort').click(function () {
-        var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
-        var $target = $('#starter, #main, #dessert');
+function sortingEvent (comparisonParameter) {
+    var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
+    var $target = $('#starter, #main, #dessert');
 
-        for (var i = 0; i < $elements.length; i++) {
-            $elements[i].sort(function (a, b) {
-                var an = $(a).find('span').text(),
-                    bn = $(b).find('span').text();
+    for (var i = 0; i < $elements.length; i++) {
+        $elements[i].sort(function (a, b) {
+            var an = $(a).find('span').text(),
+                bn = $(b).find('span').text();
 
+            if(comparisonParameter == '>') {
                 if (+an > +bn) {
                     return -1;
                 } else {
                     return 1;
                 }
-            });
-            $elements[i].detach().appendTo($target[i]);
-        }
-    });
-
-    $('#high-to-low-sort').click(function () {
-        var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
-        var $target = $('#starter, #main, #dessert');
-
-        for (var i = 0; i < $elements.length; i++) {
-            $elements[i].sort(function (a, b) {
-                var an = $(a).find('span').text(),
-                    bn = $(b).find('span').text();
-
+            } else if (comparisonParameter == '<'){
                 if (+an < +bn) {
                     return -1;
                 } else {
                     return 1;
                 }
-            });
-            $elements[i].detach().appendTo($target[i]);
-        }
-    });
+            }
+        });
+        $elements[i].detach().appendTo($target[i]);
+    }
+}
+
+$(document).ready(function () {
+    $("#selected").click().children().removeClass('black').addClass('blue');
 });
 
 

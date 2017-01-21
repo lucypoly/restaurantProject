@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>lucy's restaurant</title>
-    <link rel="icon" href="../img/favicon.ico">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
-    <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous"></script>
-    <script src="../lib/slider/jquery.bxslider.min.js"></script>
-    <script src="../lib/handlebars-v4.0.5.js"></script>
-    <script src="js/main.js"></script>
-    <!--[if lt IE 9]>
-    <link href="../lib/ie.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
-    <script src="../lib/flex.js"></script>
+        <title>lucy's restaurant</title>
+        <link rel="icon" href="../img/favicon.ico">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+        <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+        <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+                integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+                crossorigin="anonymous"></script>
+        <script src="../lib/slider/jquery.bxslider.min.js"></script>
+        <script src="../lib/handlebars-v4.0.5.js"></script>
+        <script src="js/main.js"></script>
+        <script src="../lib/flex.js"></script>
+    
+        <!--[if lt IE 9]>
+        <link href="../lib/ie.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
 </head>
-<body class="gray">
-<script src="../js/pagination.js"></script>
+<body class="gray" id="eventPage">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="js/pagination.js"></script>
 <header>
     <ul class="topnav" id="myTopnav">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
@@ -42,6 +52,11 @@
 
 
 <div id="events" class="content container">
+    <h2 class="center">Share with friends!</h2>
+    <div class="sharing center">
+        <div class="fb-share-button" data-href="https://github.com/lucypoly/restaurantProject" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Flucypoly%2FrestaurantProject&amp;src=sdkpreparse">Share</a></div>
+    <button id="vk_share_button"></button>
+    </div>
     <div class="filter">Filter:
         <input type="radio" name="filter-events" id="music" class="radio"><label for="music">Music events</label>
         <input type="radio" name="filter-events" id="disco" class="radio"><label for="disco">Disco events</label>
@@ -141,5 +156,8 @@
 
 <footer>
     2017, by Lucy
-</footer></body>
+</footer><script type="text/javascript">
+    document.getElementById('vk_share_button').innerHTML = VK.Share.button('http://mysite.com', {type: 'link', text: 'Share'});
+</script>
+</body>
 </html>

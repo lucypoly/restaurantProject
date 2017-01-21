@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-{{> head}}
-<body class="black">
-<script src="../js/menu.js"></script>
+<head>
+    {{> head}}
+</head>
+<body class="black" id="menuPage">
+<script src="js/menu.js"></script>
 <header>
     {{> navbar}}
 </header>
@@ -20,11 +22,11 @@
                 <div class="menu-category black">Dessert</div>
             </a>
         </div>
-        <div class="white padding-30">
+        <div class="white padding-30" id="menuBox">
             <div class="right">
                 <span>Sort by price: </span>
-                <button id="low-to-high-sort">&uarr;</button>
-                <button id="high-to-low-sort">&darr;</button>
+                <button id="low-to-high-sort" onclick="sortingEvent('<')">&uarr;</button>
+                <button id="high-to-low-sort" onclick="sortingEvent('>')">&darr;</button>
             </div>
             <div id="starter" class="menu content">
                 {{#each starter}}

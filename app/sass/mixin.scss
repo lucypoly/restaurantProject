@@ -1,0 +1,8 @@
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-100: $opacity * 100;
+  filter: alpha(opacity=$opacity-100); //IE<8
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha" + $opacity-100; //ie8
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+}

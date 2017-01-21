@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>lucy's restaurant</title>
-    <link rel="icon" href="../img/favicon.ico">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
-    <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous"></script>
-    <script src="../lib/slider/jquery.bxslider.min.js"></script>
-    <script src="../lib/handlebars-v4.0.5.js"></script>
-    <script src="js/main.js"></script>
-    <!--[if lt IE 9]>
-    <link href="../lib/ie.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
-    <script src="../lib/flex.js"></script>
-</head><body class="black">
-<script src="../js/menu.js"></script>
+        <title>lucy's restaurant</title>
+        <link rel="icon" href="../img/favicon.ico">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+        <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+        <link href="../lib/slider/jquery.bxslider.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+                integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+                crossorigin="anonymous"></script>
+        <script src="../lib/slider/jquery.bxslider.min.js"></script>
+        <script src="../lib/handlebars-v4.0.5.js"></script>
+        <script src="js/main.js"></script>
+        <script src="../lib/flex.js"></script>
+    
+        <!--[if lt IE 9]>
+        <link href="../lib/ie.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+</head>
+<body class="black" id="menuPage">
+<script src="js/menu.js"></script>
 <header>
     <ul class="topnav" id="myTopnav">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
@@ -52,80 +54,80 @@
                 <div class="menu-category black">Dessert</div>
             </a>
         </div>
-        <div class="white padding-30">
+        <div class="white padding-30" id="menuBox">
             <div class="right">
                 <span>Sort by price: </span>
-                <button id="low-to-high-sort">&uarr;</button>
-                <button id="high-to-low-sort">&darr;</button>
+                <button id="low-to-high-sort" onclick="sortingEvent('<')">&uarr;</button>
+                <button id="high-to-low-sort" onclick="sortingEvent('>')">&darr;</button>
             </div>
             <div id="starter" class="menu content">
                     <div class="menu-item-starter">
-                        <h1><b class="left">chicken</b> <span class="right price">19</span></h1>
-                        <p>njhdxbwvw</p>
+                        <h1><b class="left">starter1</b> <span class="right price">19</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
-                        <h1><b class="left">salad2</b> <span class="right price">18</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">starter2</b> <span class="right price">18</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
-                        <h1><b class="left">salad2</b> <span class="right price">10</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">starter3</b> <span class="right price">10</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
-                        <h1><b class="left">salad2</b> <span class="right price">5</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">starter4</b> <span class="right price">5</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
-                        <h1><b class="left">salad2</b> <span class="right price">32</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">starter5</b> <span class="right price">32</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
             </div>
             <div id="main" class="menu content">
                     <div class="menu-item-main">
-                        <h1><b class="left">chicken</b> <span class="right price">17</span></h1>
-                        <p>njhdxbwvw</p>
+                        <h1><b class="left">main1</b> <span class="right price">17</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-main">
-                        <h1><b class="left">salad2</b> <span class="right price">18</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">main2</b> <span class="right price">18</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-main">
-                        <h1><b class="left">chicken</b> <span class="right price">28</span></h1>
-                        <p>njhdxbwvw</p>
+                        <h1><b class="left">main3</b> <span class="right price">28</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-main">
-                        <h1><b class="left">salad2</b> <span class="right price">4</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">main4</b> <span class="right price">4</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
             </div>
             <div id="dessert" class="menu content">
                     <div class="menu-item-dessert">
-                        <h1><b class="left">chicken</b> <span class="right price">4</span></h1>
-                        <p>njhdxbwvw</p>
+                        <h1><b class="left">desserts1</b> <span class="right price">4</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-dessert">
-                        <h1><b class="left">salad2</b> <span class="right price">118</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">desserts2</b> <span class="right price">118</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-dessert">
-                        <h1><b class="left">chicken</b> <span class="right price">32</span></h1>
-                        <p>njhdxbwvw</p>
+                        <h1><b class="left">desserts3</b> <span class="right price">32</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-dessert">
-                        <h1><b class="left">salad2</b> <span class="right price">77</span></h1>
-                        <p>njhdtgrtgxbwvw</p>
+                        <h1><b class="left">desserts4</b> <span class="right price">77</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
             </div>

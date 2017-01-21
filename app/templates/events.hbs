@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-{{> head}}
-
-<body class="gray">
-<script src="../js/pagination.js"></script>
+<head>
+    {{> head}}
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+</head>
+<body class="gray" id="eventPage">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="js/pagination.js"></script>
 <header>
     {{> navbar}}
 </header>
 
 
 <div id="events" class="content container">
+    <h2 class="center">Share with friends!</h2>
+    <div class="sharing center">
+        <div class="fb-share-button" data-href="https://github.com/lucypoly/restaurantProject" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Flucypoly%2FrestaurantProject&amp;src=sdkpreparse">Share</a></div>
+    <button id="vk_share_button"></button>
+    </div>
     <div class="filter">Filter:
         <input type="radio" name="filter-events" id="music" class="radio"><label for="music">Music events</label>
         <input type="radio" name="filter-events" id="disco" class="radio"><label for="disco">Disco events</label>
@@ -40,5 +55,8 @@
 </div>
 
 {{> footer}}
+<script type="text/javascript">
+    document.getElementById('vk_share_button').innerHTML = VK.Share.button('http://mysite.com', {type: 'link', text: 'Share'});
+</script>
 </body>
 </html>

@@ -1,63 +1,73 @@
-#menu {
-  background: black;
-  text-align: center;
-  box-sizing: border-box;
-  button{
-    background-color: white;
-    color: darkslategrey;
-    border: none;
-    outline: 0;
-    font-weight: bold;
-    cursor: pointer;
-    vertical-align: middle;
-  }
-  h1 {
-    color: white;
-  }
-  .menu-heading {
+@import "mixin.scss";
+#menuPage {
+  background-image: url(../img/bg-4.jpg);
+  background-size: cover;
+  #menu {
     text-align: center;
-    height: 72px;
-
-    a {
-      text-decoration: none;
-      color: white;
-      box-sizing: border-box;
-    }
-    .menu-category {
-      padding: 12px 24px;
-      float: left;
-      text-align: center;
-      box-sizing: border-box;
-      font-size: 36px;
-      width: 33.3%;
-      border: 1px solid darkcyan;
-      &:hover {
-        background-color: darkcyan;
+    box-sizing: border-box;
+    #menuBox{
+      @include opacity(0.8);
+      &:hover{
+        @include opacity(0.9);
       }
     }
-  }
-  .menu {
-    background-color: white;
-    font-size: 36px;
-    padding: 32px 16px;
-    color: black;
-    text-align: left;
+    button {
+      background-color: white;
+      color: darkslategrey;
+      border: none;
+      outline: 0;
+      font-weight: bold;
+      cursor: pointer;
+      vertical-align: middle;
+    }
     h1 {
-      color: black;
-      font-size: 32px;
-    }
-    p{
-      font-size: 24px;
-      color: darkslategray;
-    }
-    .price{
       color: white;
-      background-color: darkslategray;
-      padding: 10px 15px;
-      border-radius: 3px;
     }
-    hr{
-      color: darkcyan;
+    .menu-heading {
+      text-align: center;
+      height: 72px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        box-sizing: border-box;
+      }
+      .menu-category {
+        padding: 12px 24px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 36px;
+        width: 33.3%;
+        border: 1px solid darkcyan;
+        &:hover {
+          background-color: darkcyan;
+        }
+      }
+    }
+    .menu {
+      background-color: white;
+      font-size: 36px;
+      padding: 32px 16px;
+      color: black;
+      text-align: left;
+      h1 {
+        color: black;
+        font-size: 32px;
+      }
+      p {
+        font-size: 24px;
+        color: darkslategray;
+      }
+      .price {
+        color: white;
+        background-color: darkslategray;
+        padding: 10px 15px;
+        border-radius: 3px;
+      }
+      hr {
+        color: darkcyan;
+      }
     }
   }
 }

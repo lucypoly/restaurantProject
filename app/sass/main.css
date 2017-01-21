@@ -156,56 +156,70 @@ div.label {
   div.label:hover {
     background-color: rgba(51, 51, 51, 0.8); }
 
-#menu {
-  background: black;
-  text-align: center;
-  box-sizing: border-box; }
-  #menu button {
-    background-color: white;
-    color: darkslategrey;
-    border: none;
-    outline: 0;
-    font-weight: bold;
-    cursor: pointer;
-    vertical-align: middle; }
-  #menu h1 {
-    color: white; }
-  #menu .menu-heading {
+#menuPage {
+  background-image: url(../img/bg-4.jpg);
+  background-size: cover; }
+  #menuPage #menu {
     text-align: center;
-    height: 72px; }
-    #menu .menu-heading a {
-      text-decoration: none;
-      color: white;
-      box-sizing: border-box; }
-    #menu .menu-heading .menu-category {
-      padding: 12px 24px;
-      float: left;
+    box-sizing: border-box; }
+    #menuPage #menu #menuBox {
+      opacity: 0.8;
+      filter: alpha(opacity=80);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha80";
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8; }
+      #menuPage #menu #menuBox:hover {
+        opacity: 0.9;
+        filter: alpha(opacity=90);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha90";
+        -moz-opacity: 0.9;
+        -khtml-opacity: 0.9; }
+    #menuPage #menu button {
+      background-color: white;
+      color: darkslategrey;
+      border: none;
+      outline: 0;
+      font-weight: bold;
+      cursor: pointer;
+      vertical-align: middle; }
+    #menuPage #menu h1 {
+      color: white; }
+    #menuPage #menu .menu-heading {
       text-align: center;
-      box-sizing: border-box;
+      height: 72px; }
+      #menuPage #menu .menu-heading a {
+        text-decoration: none;
+        color: white;
+        box-sizing: border-box; }
+      #menuPage #menu .menu-heading .menu-category {
+        padding: 12px 24px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 36px;
+        width: 33.3%;
+        border: 1px solid darkcyan; }
+        #menuPage #menu .menu-heading .menu-category:hover {
+          background-color: darkcyan; }
+    #menuPage #menu .menu {
+      background-color: white;
       font-size: 36px;
-      width: 33.3%;
-      border: 1px solid darkcyan; }
-      #menu .menu-heading .menu-category:hover {
-        background-color: darkcyan; }
-  #menu .menu {
-    background-color: white;
-    font-size: 36px;
-    padding: 32px 16px;
-    color: black;
-    text-align: left; }
-    #menu .menu h1 {
+      padding: 32px 16px;
       color: black;
-      font-size: 32px; }
-    #menu .menu p {
-      font-size: 24px;
-      color: darkslategray; }
-    #menu .menu .price {
-      color: white;
-      background-color: darkslategray;
-      padding: 10px 15px;
-      border-radius: 3px; }
-    #menu .menu hr {
-      color: darkcyan; }
+      text-align: left; }
+      #menuPage #menu .menu h1 {
+        color: black;
+        font-size: 32px; }
+      #menuPage #menu .menu p {
+        font-size: 24px;
+        color: darkslategray; }
+      #menuPage #menu .menu .price {
+        color: white;
+        background-color: darkslategray;
+        padding: 10px 15px;
+        border-radius: 3px; }
+      #menuPage #menu .menu hr {
+        color: darkcyan; }
 
 #galleryPage {
   justify-content: space-around; }
@@ -237,7 +251,7 @@ div.label {
   padding: 20px 10px; }
   #modal_form img {
     width: 95%;
-    margin-left: 2; }
+    margin-left: 2.5%; }
 
 /* ╨Ъ╨╜o╨┐╨║a ╨╖a╨║╤А╤Л╤В╤М ╨┤╨╗╤П ╤В╨╡╤Е ╨║╤Вo ╨▓ ╤Вa╨╜╨║╨╡) */
 #modal_form #modal_close {
@@ -272,18 +286,101 @@ div.label {
   display: none;
   /* ╨▓ o╨▒╤Л╤З╨╜o╨╝ ╤Бo╤Б╤Вo╤П╨╜╨╕╨╕ ╨╡╤С ╨╜╨╡╤В) */ }
 
-#contacts {
-  height: 100%; }
-  #contacts .container {
-    height: 100%; }
-  #contacts #googleMap {
-    width: 60%; }
-  #contacts .text {
-    width: 35%; }
-  #contacts a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold; }
+#contactPage {
+  background-image: url("../img/bg-3.jpg");
+  background-size: cover;
+  /* Hide success/failure message
+     (especially since the php is missing) */ }
+  #contactPage #contacts {
+    height: 100%;
+    color: white; }
+    #contactPage #contacts .container {
+      height: 100%; }
+    #contactPage #contacts #googleMap {
+      width: 60%;
+      margin-bottom: 60px; }
+    #contactPage #contacts .text {
+      width: 35%; }
+    #contactPage #contacts a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold; }
+  #contactPage h1 {
+    background-color: rgba(72, 72, 72, 0.7);
+    display: inline-block;
+    margin: 50px 0 20px 0;
+    padding: 10px; }
+  #contactPage #contact-form {
+    background-color: rgba(72, 72, 72, 0.7);
+    padding: 10px 20px 30px 20px;
+    max-width: 50%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    margin-bottom: 60px;
+    font-family: 'Arsenal', sans-serif; }
+  #contactPage #contact-form input,
+  #contactPage #contact-form textarea,
+  #contactPage #contact-form label {
+    font-size: 18px;
+    margin-bottom: 5px; }
+  #contactPage #contact-form input,
+  #contactPage #contact-form textarea {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 5px; }
+  #contactPage #contact-form input:focus,
+  #contactPage #contact-form select:focus,
+  #contactPage #contact-form textarea:focus {
+    background-color: #E5E6E7; }
+  #contactPage #contact-form textarea {
+    width: 100%;
+    height: 150px; }
+  #contactPage #contact-form button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: darkcyan;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px; }
+  #contactPage #contact-form button[type="submit"]:hover {
+    background-color: #004d4d;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; }
+  #contactPage #contact-form button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+  #contactPage input:required, #contactPage textarea:required {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none; }
+  #contactPage #contact-form .required {
+    font-weight: bold;
+    color: #E5E6E7; }
+  #contactPage #failure, #contactPage #success {
+    color: #6EA070;
+    display: none; }
+
+@media only screen and (max-device-width: 768px) {
+  #contactPage #contact-form {
+    min-width: 100%; }
+
+  #contactPage #contacts #googleMap {
+    width: 100%;
+    height: 500px; } }
+#eventPage {
+  background: linear-gradient(to right, #1eb089 0%, #7c49ab 100%, #7db9e8 100%); }
+  #eventPage h2 {
+    margin: 5px 0; }
+  #eventPage .sharing {
+    margin-bottom: 20px; }
 
 .main-info {
   cursor: pointer; }
@@ -355,20 +452,26 @@ div.label {
 .radio:focus + label:before {
   box-shadow: 0 0 0 3px rgba(255, 162, 208, 0.5); }
 
-#reservation {
+#reservationPage .svg-table {
+  background-image: url("../img/bg-5.jpg");
+  background-size: cover;
+  background-position: top; }
+#reservationPage .booking-form {
+  background-color: #333333; }
+#reservationPage #reservation {
   width: 100%;
   text-align: center;
   font-family: 'Arsenal', sans-serif; }
-  #reservation #svg-table {
+  #reservationPage #reservation #svg-table {
     border: 1px solid white; }
-  #reservation rect#canvas_background, #reservation rect#scene {
+  #reservationPage #reservation rect#canvas_background, #reservationPage #reservation rect#scene {
     cursor: auto; }
-  #reservation rect, #reservation ellipse {
+  #reservationPage #reservation rect, #reservationPage #reservation ellipse {
     cursor: pointer;
     fill: darkcyan; }
-  #reservation rect#canvas_background {
-    fill: black; }
-  #reservation .booking-table input, #reservation .booking-table button, #reservation .booking-table input[type="date"] {
+  #reservationPage #reservation rect#canvas_background {
+    fill: transparent; }
+  #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
     padding: 8px 16px;
     border: none;
     outline: none;
@@ -377,29 +480,29 @@ div.label {
     margin: 5px 0;
     color: gray;
     background-color: white; }
-  #reservation .booking-table button {
+  #reservationPage #reservation .booking-table button {
     background-color: darkcyan;
     color: white;
     font-size: 20px;
     margin: 5px 0;
     cursor: pointer;
     display: inline-block; }
-  #reservation .booking-table select {
+  #reservationPage #reservation .booking-table select {
     padding: 5px 10px;
     border: none;
     outline: 0;
     font-size: 20px;
     margin: 5px 5px;
     color: gray; }
-  #reservation .booking-table .error {
+  #reservationPage #reservation .booking-table .error {
     color: coral;
     font-size: 18px;
     display: none; }
-
 @media only screen and (max-device-width: 768px) {
-  #reservation .booking-table input, #reservation .booking-table button, #reservation .booking-table input[type="date"] {
+  #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
     width: 90%;
     text-align: center; } }
+
 .parallax {
   min-height: 500px;
   background-attachment: fixed;
@@ -479,7 +582,7 @@ h1 {
   color: black; }
 
 .gray {
-  background-color: #607d8b;
+  background-color: #7eaeb0;
   color: white; }
 
 .rose {

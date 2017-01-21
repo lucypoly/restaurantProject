@@ -8,6 +8,7 @@
 @import "reservation.scss";
 @import "index.scss";
 
+
 body, html {height: 100%; width:100%; color: black;  margin:0; padding:0;} body{font-size: 24px}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 h1{font-size: 48px; text-transform: uppercase; margin: 0; padding: 20px 0}
@@ -15,7 +16,7 @@ h1{font-size: 48px; text-transform: uppercase; margin: 0; padding: 20px 0}
 .blue{background-color: darkcyan; color: white}
 .black{background-color: black; color: white}
 .white{background-color: white; color: black}
-.gray{background-color: #607d8b; color: white}
+.gray{background-color: #7eaeb0; color: white}
 .rose{background-color: #ffedda; color: black}
 section{padding: 60px 0}
 .container{padding:60px 5px 60px 5px}
@@ -33,6 +34,7 @@ p{text-align: justify}
 .inline{display: inline-block;}
 .rounded{border-radius: 50%;
 }
+
 
 
 @media only screen

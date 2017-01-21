@@ -1,44 +1,34 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(document).ready(function () {
-    $("#selected").click().children().removeClass('black').addClass('blue');
 
-    $('#low-to-high-sort').click(function () {
-        var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
-        var $target = $('#starter, #main, #dessert');
+function sortingEvent (comparisonParameter) {
+    var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
+    var $target = $('#starter, #main, #dessert');
 
-        for (var i = 0; i < $elements.length; i++) {
-            $elements[i].sort(function (a, b) {
-                var an = $(a).find('span').text(),
-                    bn = $(b).find('span').text();
+    for (var i = 0; i < $elements.length; i++) {
+        $elements[i].sort(function (a, b) {
+            var an = $(a).find('span').text(),
+                bn = $(b).find('span').text();
 
+            if(comparisonParameter == '>') {
                 if (+an > +bn) {
                     return -1;
                 } else {
                     return 1;
                 }
-            });
-            $elements[i].detach().appendTo($target[i]);
-        }
-    });
-
-    $('#high-to-low-sort').click(function () {
-        var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
-        var $target = $('#starter, #main, #dessert');
-
-        for (var i = 0; i < $elements.length; i++) {
-            $elements[i].sort(function (a, b) {
-                var an = $(a).find('span').text(),
-                    bn = $(b).find('span').text();
-
+            } else if (comparisonParameter == '<'){
                 if (+an < +bn) {
                     return -1;
                 } else {
                     return 1;
                 }
-            });
-            $elements[i].detach().appendTo($target[i]);
-        }
-    });
+            }
+        });
+        $elements[i].detach().appendTo($target[i]);
+    }
+}
+
+$(document).ready(function () {
+    $("#selected").click().children().removeClass('black').addClass('blue');
 });
 
 
