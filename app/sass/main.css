@@ -372,6 +372,10 @@ div.label {
     display: none; }
 
 @media only screen and (max-device-width: 768px) {
+  body {
+    background: black;
+    padding: 50px 0; }
+
   #contactPage #contact-form {
     min-width: 100%; }
 
@@ -380,6 +384,9 @@ div.label {
     height: 500px; } }
 #eventPage {
   background: linear-gradient(to right, #1eb089 0%, #7c49ab 100%, #7db9e8 100%); }
+  #eventPage #vk_share_button {
+    background-color: white;
+    border: 1px solid white; }
   #eventPage h2 {
     margin: 5px 0; }
   #eventPage .sharing {
@@ -506,6 +513,9 @@ div.label {
     width: 90%;
     text-align: center; } }
 
+@media only screen and (max-device-width: 768px) {
+  body {
+    padding: 50px 0; } }
 .parallax {
   min-height: 500px;
   background-attachment: fixed;

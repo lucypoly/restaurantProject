@@ -95,6 +95,10 @@
 
 @media only screen
 and (max-device-width: 768px){
+  body{
+    background: black;
+    padding: 50px 0;
+  }
   #contactPage #contact-form {
     min-width:100%;
   }
