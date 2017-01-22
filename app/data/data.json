@@ -69,12 +69,12 @@
     {
       "name": "starter1",
       "price": 19,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Potato ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "starter2",
       "price": 18,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Tomato ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "starter3",
@@ -96,12 +96,12 @@
     {
       "name": "main1",
       "price": 17,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Meet ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "main2",
       "price": 18,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Chicken ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "main3",
@@ -118,12 +118,12 @@
     {
       "name": "desserts1",
       "price": 4,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Chocolate ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "desserts2",
       "price": 118,
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
+      "description": "Ice-cream ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo"
     },
     {
       "name": "desserts3",
@@ -212,13 +212,8 @@
       "time": "30/01/2017 at 22:00",
       "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
       "type" : "Disco"
-    },{
-      "name": "event12",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-      "time": "30/01/2017 at 22:00",
-      "imgURL": "https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
-      "type" : "Disco"
-    },{
+    },
+    {
       "name": "event13",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
       "time": "30/01/2017 at 22:00",
