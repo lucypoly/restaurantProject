@@ -3,6 +3,13 @@
   background-image: url(../img/bg-4.jpg);
   background-size: cover;
   #menu {
+    #filter-count{
+      font-size: 24px;
+    }
+    input.text-input{
+      padding: 5px;
+      margin: 5px;
+    }
     text-align: center;
     box-sizing: border-box;
     #menuBox{

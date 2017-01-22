@@ -2,30 +2,37 @@
 <html>
 <head>
     {{> head}}
-</head><body>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        $('.slider').css('display', 'block');
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true
+        });
+    });
+</script>
 <header>
     {{> navbar}}
 
     <div class="label">
         lucy's restaurant
     </div>
-    <div class="slider">
+    <div class="slider" style="display: none">
         <ul class="bxslider">
-            <li><img src="../img/slider/de7wn2yzt4g-josh-wilburne.jpg"/></li>
-            <li><img src="../img/slider/n_y88twmgwa-jay-wennington.jpg"/></li>
-            <li><img src="../img/slider/x9za3vjkigc-freddie-marriage.jpg"/></li>
+            <li><img src="img/slider/de7wn2yzt4g-josh-wilburne.jpg"/></li>
+            <li><img src="img/slider/n_y88twmgwa-jay-wennington.jpg"/></li>
+            <li><img src="img/slider/x9za3vjkigc-freddie-marriage.jpg"/></li>
         </ul>
     </div>
 </header>
+
+
 {{> about}}
 
 {{> footer}}
 <script>
-    $(document).ready(function () {
-        $('.bxslider').bxSlider({
-            adaptiveHeight: true
-        });
-    });
+
 </script>
 </body>
 </html>

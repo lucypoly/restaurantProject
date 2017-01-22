@@ -42,6 +42,7 @@
 <section>
     <div id="menu" class="content">
         <h1>the menu</h1>
+
         <div class="menu-heading">
             <a href="javascript:void(0)" onclick="openMenu(event, 'starter');" id="selected">
                 <div class="menu-category black">Starter</div>
@@ -54,20 +55,26 @@
             </a>
         </div>
         <div class="white padding-30" id="menuBox">
+
             <div class="right">
                 <span>Sort by price: </span>
                 <button id="low-to-high-sort" onclick="sortingEvent('<')">&uarr;</button>
                 <button id="high-to-low-sort" onclick="sortingEvent('>')">&darr;</button>
             </div>
             <div id="starter" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-starter-search" value=""/>
+                <span id="filter-count"></span>
+
                     <div class="menu-item-starter">
                         <h1><b class="left">starter1</b> <span class="right price">19</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Potato ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
                         <h1><b class="left">starter2</b> <span class="right price">18</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Tomato ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-starter">
@@ -87,14 +94,19 @@
                     </div>
             </div>
             <div id="main" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-main-search" value=""/>
+                <span id="filter-count"></span>
+
                     <div class="menu-item-main">
                         <h1><b class="left">main1</b> <span class="right price">17</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Meet ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-main">
                         <h1><b class="left">main2</b> <span class="right price">18</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Chicken ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-main">
@@ -109,14 +121,19 @@
                     </div>
             </div>
             <div id="dessert" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-dessert-search" value=""/>
+                <span id="filter-count"></span>
+
                     <div class="menu-item-dessert">
                         <h1><b class="left">desserts1</b> <span class="right price">4</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Chocolate ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-dessert">
                         <h1><b class="left">desserts2</b> <span class="right price">118</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+                        <p>Ice-cream ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
                         <hr>
                     </div>
                     <div class="menu-item-dessert">

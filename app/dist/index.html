@@ -18,7 +18,16 @@
         <link href="../lib/ie.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
         <![endif]-->
-</head><body>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        $('.slider').css('display', 'block');
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true
+        });
+    });
+</script>
 <header>
     <ul class="topnav" id="myTopnav">
         <li class="menu-item" id="index"><a href="index.html">Home</a></li>
@@ -40,14 +49,24 @@
     <div class="label">
         lucy's restaurant
     </div>
-    <div class="slider">
+    <div class="slider" style="display: none">
         <ul class="bxslider">
-            <li><img src="../img/slider/de7wn2yzt4g-josh-wilburne.jpg"/></li>
-            <li><img src="../img/slider/n_y88twmgwa-jay-wennington.jpg"/></li>
-            <li><img src="../img/slider/x9za3vjkigc-freddie-marriage.jpg"/></li>
+            <li><img src="img/slider/de7wn2yzt4g-josh-wilburne.jpg"/></li>
+            <li><img src="img/slider/n_y88twmgwa-jay-wennington.jpg"/></li>
+            <li><img src="img/slider/x9za3vjkigc-freddie-marriage.jpg"/></li>
         </ul>
     </div>
 </header>
+
+
+<div class="container blue social">
+    <h1 class="center">Visit us in social networks!</h1>
+    <div class="center">
+    <a href="#" class="icon icon-cube facebook">facebook</a>
+    <a href="#" class="icon icon-cube twitter">twitter</a>
+    <a href="#" class="icon icon-cube googleplus">google+</a>
+    </div>
+</div>
 <div class="container parallax about" id="about">
     <div class="content half left">
         <h1 class="center">About</h1>
@@ -113,11 +132,7 @@
 <footer>
     2017, by Lucy
 </footer><script>
-    $(document).ready(function () {
-        $('.bxslider').bxSlider({
-            adaptiveHeight: true
-        });
-    });
+
 </script>
 </body>
 </html>

@@ -22,10 +22,11 @@
 </head>
 <body class="gray" id="eventPage">
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
@@ -53,8 +54,12 @@
 <div id="events" class="content container">
     <h2 class="center">Share with friends!</h2>
     <div class="sharing center">
-        <div class="fb-share-button" data-href="https://github.com/lucypoly/restaurantProject" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Flucypoly%2FrestaurantProject&amp;src=sdkpreparse">Share</a></div>
-    <br><button id="vk_share_button"></button>
+        <div class="fb-share-button" data-href="https://github.com/lucypoly/restaurantProject" data-layout="button"
+             data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2Flucypoly%2FrestaurantProject&amp;src=sdkpreparse">Share</a>
+        </div>
+        <br>
+        <button id="vk_share_button"></button>
     </div>
     <div class="filter">Filter:
         <input type="radio" name="filter-events" id="music" class="radio"><label for="music">Music events</label>
@@ -63,6 +68,7 @@
         <input type="radio" name="filter-events" id="food" class="radio"><label for="food">Food festivals</label>
         <input type="radio" checked name="filter-events" id="all" class="radio"><label for="all">All</label>
     </div>
+
     <!-- the input fields that will hold the variables we will use -->
     <input type='hidden' id='current_page'/>
     <input type='hidden' id='show_per_page'/>
@@ -148,13 +154,6 @@
                 <hr>
             </div>
             <div class="event-item Disco">
-                <h1 class="main-info row-wrap-between"><b>event12 (Disco)</b> <span>30/01/2017 at 22:00</span>
-                </h1>
-                <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
-                        src="https://images.unsplash.com/photo-1468276540746-9bb423991265?dpr&#x3D;1&amp;auto&#x3D;compress,format&amp;fit&#x3D;crop&amp;w&#x3D;1199&amp;h&#x3D;799&amp;q&#x3D;80&amp;cs&#x3D;tinysrgb&amp;crop&#x3D;"/></div>
-                <hr>
-            </div>
-            <div class="event-item Disco">
                 <h1 class="main-info row-wrap-between"><b>event13 (Disco)</b> <span>30/01/2017 at 22:00</span>
                 </h1>
                 <div class="row-wrap-between details" style="display: none"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p><img
@@ -184,7 +183,10 @@
 <footer>
     2017, by Lucy
 </footer><script type="text/javascript">
-    document.getElementById('vk_share_button').innerHTML = VK.Share.button("https://github.com/lucypoly/restaurantProject", {type: 'link', text: 'Share'});
+    document.getElementById('vk_share_button').innerHTML = VK.Share.button("https://github.com/lucypoly/restaurantProject", {
+        type: 'link',
+        text: 'Share'
+    });
 </script>
 </body>
 </html>

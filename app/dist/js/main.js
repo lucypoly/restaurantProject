@@ -25,6 +25,7 @@ $(document).ready(function () {
             pagination();
         });
     }
+
     filtrationEvent('music', 'Music');
     filtrationEvent('food', 'Food');
     filtrationEvent('disco', 'Disco');
@@ -46,9 +47,11 @@ function menuCollapse() {
     }
 }
 
-window.onload = function () {
-    window.scrollTo(0,0);
-};
+
+
+// window.onload = function () {
+//     window.scrollTo(0,0);
+// };
 
 
 },{}]},{},[1])

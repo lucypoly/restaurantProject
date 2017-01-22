@@ -11,6 +11,7 @@
 <section>
     <div id="menu" class="content">
         <h1>the menu</h1>
+
         <div class="menu-heading">
             <a href="javascript:void(0)" onclick="openMenu(event, 'starter');" id="selected">
                 <div class="menu-category black">Starter</div>
@@ -23,12 +24,18 @@
             </a>
         </div>
         <div class="white padding-30" id="menuBox">
+
             <div class="right">
                 <span>Sort by price: </span>
                 <button id="low-to-high-sort" onclick="sortingEvent('<')">&uarr;</button>
                 <button id="high-to-low-sort" onclick="sortingEvent('>')">&darr;</button>
             </div>
             <div id="starter" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-starter-search" value=""/>
+                <span id="filter-count"></span>
+
                 {{#each starter}}
                     <div class="menu-item-starter">
                         <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>
@@ -38,6 +45,11 @@
                 {{/each}}
             </div>
             <div id="main" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-main-search" value=""/>
+                <span id="filter-count"></span>
+
                 {{#each main}}
                     <div class="menu-item-main">
                         <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>
@@ -47,6 +59,11 @@
                 {{/each}}
             </div>
             <div id="dessert" class="menu content">
+
+                Search by menu:
+                <input type="text" class="text-input" id="menu-item-dessert-search" value=""/>
+                <span id="filter-count"></span>
+
                 {{#each desserts}}
                     <div class="menu-item-dessert">
                         <h1><b class="left">{{this.name}}</b> <span class="right price">{{this.price}}</span></h1>

@@ -24,7 +24,7 @@ document.querySelectorAll('g')[2].addEventListener('click', function (event) {
 document.querySelector('#date').addEventListener('blur', function (e) {
 
     var selectedDate = e.target.value;
-    if (new Date() >= new Date(selectedDate)) {
+    if (Date.parse(new Date().toDateString()) > Date.parse(new Date(selectedDate).toDateString())) {
         document.getElementById('invalid-future').style.display = 'inline-block';
         document.getElementById('invalid-future').innerHTML = "Please, select a future date!";
         return;
@@ -112,6 +112,8 @@ document.querySelector('#book').addEventListener('click', function (e) {
         booking[currentTable.name][document.querySelector('#date').value].push(currentBooking);
     }
     localStorage.setItem('booking', JSON.stringify(booking));
+    alert('success');
+    window.location.reload();
 });
 
 
