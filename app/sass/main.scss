@@ -7,6 +7,7 @@
 @import "events.scss";
 @import "reservation.scss";
 @import "index.scss";
+@import "variables.scss";
 
 
 body, html {height: 100%; width:100%; color: black;  margin:0; padding:0;} body{font-size: 24px}
@@ -25,7 +26,7 @@ section{padding: 60px 0}
 .row-wrap{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around}
 .row-wrap-between{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between}
 .column{display: flex;  flex-direction: column}
-.half{width: 45%; padding:0 8px}
+.half{width: 45%; padding:0 8px;}
 .right{float: right}
 .left{float: left}
 .padding-30{padding: 30px}

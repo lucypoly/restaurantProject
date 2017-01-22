@@ -28,7 +28,7 @@
   transition: 0.3s;
   margin: 20px;
   &:hover {
-    background-color: darkcyan;
+    background-color: #004d4d;
     .caption {
       color: white;
     }
@@ -41,7 +41,7 @@
       margin: 0;
     }
     h2 {
-      font-size: 72px;
+      font-size: 48px;
       font-weight: 900;
       line-height: 1.1;
     }

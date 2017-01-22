@@ -15,7 +15,7 @@ var booking = JSON.parse(localStorage.getItem('booking')) || {
     };
 var currentTable = {};
 var allHours = [];
-for (var k = 11; k < 24; k++) {
+for (var k = 11; k <24; k++) {
     allHours.push(k);
 }
 document.querySelectorAll('g')[2].addEventListener('click', function (event) {
@@ -120,11 +120,11 @@ document.querySelector('#book').addEventListener('click', function (e) {
 
 $(document).ready(function () {
     $('.table').on('click', function (evt) {
-        $('.table').css('fill', 'darkcyan');
+        $('.table').css('fill', '#004d4d');
         $(evt.target).css('fill', 'gray');
     });
     $('#book').on('click', function () {
-        $('.table').css('fill', 'darkcyan');
+        $('.table').css('fill', '#004d4d');
     });
 });
 

@@ -181,7 +181,7 @@ div.label {
         -khtml-opacity: 0.9; }
     #menuPage #menu button {
       background-color: white;
-      color: darkslategrey;
+      color: #004d4d;
       border: none;
       outline: 0;
       font-weight: bold;
@@ -203,9 +203,9 @@ div.label {
         box-sizing: border-box;
         font-size: 36px;
         width: 33.3%;
-        border: 1px solid darkcyan; }
+        border: 1px solid #004d4d; }
         #menuPage #menu .menu-heading .menu-category:hover {
-          background-color: darkcyan; }
+          background-color: #004d4d; }
     #menuPage #menu .menu {
       background-color: white;
       font-size: 36px;
@@ -217,14 +217,14 @@ div.label {
         font-size: 32px; }
       #menuPage #menu .menu p {
         font-size: 24px;
-        color: darkslategray; }
+        color: #004d4d; }
       #menuPage #menu .menu .price {
         color: white;
-        background-color: darkslategray;
+        background-color: #004d4d;
         padding: 10px 15px;
         border-radius: 3px; }
       #menuPage #menu .menu hr {
-        color: darkcyan; }
+        color: #004d4d; }
 
 #galleryPage {
   justify-content: space-around; }
@@ -305,9 +305,7 @@ div.label {
 
 #contactPage {
   background-image: url("../img/bg-3.jpg");
-  background-size: cover;
-  /* Hide success/failure message
-     (especially since the php is missing) */ }
+  background-size: cover; }
   #contactPage #contacts {
     height: 100%;
     color: white; }
@@ -358,12 +356,12 @@ div.label {
     cursor: pointer;
     width: 100%;
     border: none;
-    background-color: darkcyan;
+    background-color: #004d4d;
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px; }
   #contactPage #contact-form button[type="submit"]:hover {
-    background-color: #004d4d;
+    background-color: #003232;
     transition: background-color 0.3s ease-in-out; }
   #contactPage #contact-form button[type="submit"]:active {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
@@ -372,9 +370,6 @@ div.label {
   #contactPage #contact-form .required {
     font-weight: bold;
     color: #E5E6E7; }
-  #contactPage #failure, #contactPage #success {
-    color: #6EA070;
-    display: none; }
 
 @media only screen and (max-device-width: 768px) {
   body {
@@ -388,7 +383,7 @@ div.label {
     width: 100%;
     height: 500px; } }
 #eventPage {
-  background: linear-gradient(to right, #1eb089 0%, #7c49ab 100%, #7db9e8 100%); }
+  background: linear-gradient(to right, #004d4d 0%, #7c49ab 100%, #7db9e8 100%); }
   #eventPage #vk_share_button {
     background-color: white;
     border: 1px solid white; }
@@ -467,52 +462,58 @@ div.label {
 .radio:focus + label:before {
   box-shadow: 0 0 0 3px rgba(255, 162, 208, 0.5); }
 
-#reservationPage .svg-table {
-  background-image: url("../img/bg-5.jpg");
-  background-size: cover;
-  background-position: top; }
 #reservationPage .booking-form {
-  background-color: #333333; }
+  margin-bottom: 50px; }
+#reservationPage .svg-table {
+  margin-bottom: 50px; }
 #reservationPage #reservation {
   width: 100%;
   text-align: center;
   font-family: 'Arsenal', sans-serif; }
-  #reservationPage #reservation #svg-table {
-    border: 1px solid white; }
   #reservationPage #reservation rect#canvas_background, #reservationPage #reservation rect#scene {
     cursor: auto; }
   #reservationPage #reservation rect, #reservationPage #reservation ellipse {
     cursor: pointer;
-    fill: darkcyan; }
+    fill: #004d4d; }
   #reservationPage #reservation rect#canvas_background {
     fill: transparent; }
-  #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
-    padding: 8px 16px;
-    border: none;
-    outline: none;
-    width: 50%;
-    font-size: 20px;
-    margin: 5px 0;
-    color: gray;
-    background-color: white; }
-  #reservationPage #reservation .booking-table button {
-    background-color: darkcyan;
-    color: white;
-    font-size: 20px;
-    margin: 5px 0;
-    cursor: pointer;
-    display: inline-block; }
-  #reservationPage #reservation .booking-table select {
-    padding: 5px 10px;
-    border: none;
-    outline: 0;
-    font-size: 20px;
-    margin: 5px 5px;
-    color: gray; }
-  #reservationPage #reservation .booking-table .error {
-    color: coral;
-    font-size: 18px;
-    display: none; }
+  #reservationPage #reservation .booking-table {
+    background-color: #004d4d;
+    width: 80%;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha70";
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7; }
+    #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
+      padding: 8px 16px;
+      border: none;
+      outline: none;
+      width: 50%;
+      font-size: 20px;
+      margin: 5px 0;
+      color: gray;
+      background-color: white; }
+    #reservationPage #reservation .booking-table button {
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+      margin: 5px 0;
+      cursor: pointer;
+      display: inline-block; }
+      #reservationPage #reservation .booking-table button:hover {
+        background-color: #606060; }
+    #reservationPage #reservation .booking-table select {
+      padding: 5px 10px;
+      border: none;
+      outline: 0;
+      font-size: 20px;
+      margin: 5px 5px;
+      color: gray; }
+    #reservationPage #reservation .booking-table .error {
+      color: coral;
+      font-size: 18px;
+      display: none; }
 @media only screen and (max-device-width: 768px) {
   #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
     width: 90%;
@@ -520,7 +521,10 @@ div.label {
 
 @media only screen and (max-device-width: 768px) {
   body {
-    padding: 50px 0; } }
+    padding: 100px 0 0; }
+
+  #reservationPage #reservation .booking-table {
+    width: 95%; } }
 .parallax {
   min-height: 500px;
   background-attachment: fixed;
@@ -547,7 +551,7 @@ div.label {
   transition: 0.3s;
   margin: 20px; }
   .thumb:hover {
-    background-color: darkcyan; }
+    background-color: #004d4d; }
     .thumb:hover .caption {
       color: white; }
   .thumb .caption {
@@ -557,7 +561,7 @@ div.label {
     .thumb .caption h2 {
       margin: 0; }
     .thumb .caption h2 {
-      font-size: 72px;
+      font-size: 48px;
       font-weight: 900;
       line-height: 1.1; }
 

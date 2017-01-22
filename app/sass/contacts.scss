@@ -1,3 +1,4 @@
+@import "variables.scss";
 #contactPage{
   background-image: url("../img/bg-3.jpg");
   background-size: cover;
@@ -65,13 +66,13 @@
     cursor:pointer;
     width:100%;
     border:none;
-    background-color: darkcyan;
+    background-color: $blue;
     color:#FFF;
     margin:0 0 5px;
     padding:10px;
   }
   #contact-form button[type="submit"]:hover {
-    background-color: #004d4d;
+    background-color: #003232;
     transition:background-color 0.3s ease-in-out;
   }
   #contact-form button[type="submit"]:active {
@@ -83,13 +84,6 @@
   #contact-form .required {
     font-weight:bold;
     color: #E5E6E7;
-  }
-
-  /* Hide success/failure message
-     (especially since the php is missing) */
-  #failure, #success {
-    color: #6EA070;
-    display:none;
   }
 }
 

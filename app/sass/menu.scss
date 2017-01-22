@@ -1,4 +1,5 @@
 @import "mixin.scss";
+@import "variables.scss";
 #menuPage {
   background-image: url(../img/bg-4.jpg);
   background-size: cover;
@@ -20,7 +21,7 @@
     }
     button {
       background-color: white;
-      color: darkslategrey;
+      color: $blue;
       border: none;
       outline: 0;
       font-weight: bold;
@@ -46,9 +47,9 @@
         box-sizing: border-box;
         font-size: 36px;
         width: 33.3%;
-        border: 1px solid darkcyan;
+        border: 1px solid $blue;
         &:hover {
-          background-color: darkcyan;
+          background-color: $blue;
         }
       }
     }
@@ -64,16 +65,16 @@
       }
       p {
         font-size: 24px;
-        color: darkslategray;
+        color: $blue;
       }
       .price {
         color: white;
-        background-color: darkslategray;
+        background-color: $blue;
         padding: 10px 15px;
         border-radius: 3px;
       }
       hr {
-        color: darkcyan;
+        color: $blue;
       }
     }
   }
