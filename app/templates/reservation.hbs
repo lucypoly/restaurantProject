@@ -14,7 +14,7 @@
         {{> tables}}
     </div>
     <div class="container booking-form right half center">
-        <form class="booking-table">
+        <form class="booking-table" id="reservationForm">
 
             <label for="name">Your name</label><br>
             <input id="name" type="text" placeholder="Name" minlength="2" onblur="checkName(this.value)"><br>
@@ -44,6 +44,12 @@
 
             <button id="book" type="submit">Reserve</button>
         </form>
+    </div>
+</div>
+<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+        Successfully!
+        <a href="javascript:PopUpHide()">Ok!</a>
     </div>
 </div>
 

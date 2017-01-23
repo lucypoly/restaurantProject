@@ -82,7 +82,7 @@ function checkStartTime(date) {
     }
     fillHours(startHours, '#start');
 
-    if (startHours.length == 0){
+    if (startHours.length == 0) {
         document.getElementById('invalid-table').style.display = 'inline-block';
         document.getElementById('invalid-table').innerHTML = "This table is not available! Please select another one!";
     } else {
@@ -143,21 +143,9 @@ document.querySelector('#book').addEventListener('click', function (e) {
     }
 
     localStorage.setItem('booking', JSON.stringify(booking));
-    alert('success');
-    window.location.reload();
-});
-
-
-$(document).ready(function () {
-    $('.table').on('click', function (evt) {
-        $('.table').css('fill', '#004d4d');
-        $(evt.target).css('fill', 'gray');
-        $('input[type="date"]').prop("disabled", false);
-
-    });
-    // $('#book').on('click', function () {
-    //     $('.table').css('fill', '#004d4d');
-    // });
+    PopUpShow();
+    $('.table').css('fill', '#004d4d');
+    document.getElementById("reservationForm").reset();
 });
 
 
@@ -195,6 +183,22 @@ function checkDate(str) {
         document.getElementById('invalid-date').style.display = 'none';
         return true;
     }
+}
+
+$(document).ready(function () {
+    PopUpHide();
+    $('.table').on('click', function (evt) {
+        $('.table').css('fill', '#004d4d');
+        $(evt.target).css('fill', 'gray');
+        $('input[type="date"]').prop("disabled", false);
+
+    });
+});
+function PopUpShow() {
+    $("#popup1").show();
+}
+function PopUpHide() {
+    $("#popup1").hide();
 }
 
 
