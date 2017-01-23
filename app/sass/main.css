@@ -358,7 +358,8 @@ div.label {
     background-color: #004d4d;
     color: #FFF;
     margin: 0 0 5px;
-    padding: 10px; }
+    padding: 10px;
+    border-radius: 4px; }
   #contactPage #contact-form button[type="submit"]:hover {
     background-color: #003232; }
   #contactPage input:required, #contactPage textarea:required {
@@ -458,65 +459,72 @@ div.label {
 .radio:focus + label:before {
   box-shadow: 0 0 0 3px rgba(255, 162, 208, 0.5); }
 
-#reservationPage .booking-form {
-  margin-bottom: 50px; }
-#reservationPage .svg-table {
-  margin-bottom: 50px; }
-#reservationPage #reservation {
-  width: 100%;
-  text-align: center;
-  font-family: 'Arsenal', sans-serif; }
-  #reservationPage #reservation rect#canvas_background, #reservationPage #reservation rect#scene {
-    cursor: auto; }
-  #reservationPage #reservation rect, #reservationPage #reservation ellipse {
-    cursor: pointer;
-    fill: #004d4d; }
-  #reservationPage #reservation rect#canvas_background {
-    fill: transparent; }
-  #reservationPage #reservation .booking-table {
-    background-color: #004d4d;
-    width: 80%;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha90";
-    -moz-opacity: 0.9;
-    -khtml-opacity: 0.9; }
-    #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
-      padding: 8px 16px;
-      border: none;
-      outline: none;
-      width: 50%;
-      font-size: 20px;
-      margin: 5px 0;
-      color: gray;
-      background-color: white; }
-    #reservationPage #reservation .booking-table button {
-      background-color: gray;
-      color: white;
-      font-size: 20px;
-      margin: 5px 0;
-      cursor: pointer;
-      display: inline-block; }
-      #reservationPage #reservation .booking-table button:hover {
-        background-color: #606060; }
-    #reservationPage #reservation .booking-table select {
-      padding: 5px 10px;
-      border: none;
-      outline: 0;
-      font-size: 20px;
-      margin: 5px 5px;
-      color: gray; }
-    #reservationPage #reservation .booking-table .error {
-      color: coral;
-      font-size: 18px;
-      display: none; }
-@media only screen and (max-device-width: 1100px) {
-  #reservationPage .half {
+#reservationPage {
+  background: linear-gradient(to right, #19424d 0%, #340f1d 50%); }
+  #reservationPage .booking-form {
+    margin-bottom: 50px; }
+  #reservationPage .svg-table {
+    margin-bottom: 50px; }
+  #reservationPage #reservation {
     width: 100%;
-    padding: 0; }
-  #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
-    width: 90%;
-    text-align: center; } }
+    text-align: center;
+    font-family: 'Arsenal', sans-serif; }
+    #reservationPage #reservation rect#canvas_background, #reservationPage #reservation rect#scene {
+      cursor: auto; }
+    #reservationPage #reservation rect, #reservationPage #reservation ellipse {
+      cursor: pointer;
+      fill: #004d4d; }
+    #reservationPage #reservation rect#canvas_background {
+      fill: transparent; }
+    #reservationPage #reservation .booking-table {
+      background-color: #004d4d;
+      width: 80%;
+      border-radius: 7px;
+      opacity: 0.8;
+      filter: alpha(opacity=80);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha80";
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8; }
+      #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table input[type="date"], #reservationPage #reservation .booking-table select {
+        padding: 8px 16px;
+        border: none;
+        outline: none;
+        width: 50%;
+        font-size: 20px;
+        margin: 5px 0;
+        color: black;
+        background-color: white;
+        border-radius: 4px; }
+        #reservationPage #reservation .booking-table input:focus, #reservationPage #reservation .booking-table input[type="date"]:focus, #reservationPage #reservation .booking-table select:focus {
+          background-color: #E5E6E7; }
+      #reservationPage #reservation .booking-table button {
+        padding: 8px 16px;
+        border: none;
+        outline: none;
+        width: 50%;
+        background-color: gray;
+        color: white;
+        font-size: 20px;
+        margin: 5px 0;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 4px; }
+        #reservationPage #reservation .booking-table button:hover {
+          background-color: #606060; }
+      #reservationPage #reservation .booking-table select {
+        width: 50px;
+        padding: 0; }
+      #reservationPage #reservation .booking-table .error {
+        color: coral;
+        font-size: 18px;
+        display: none; }
+  @media only screen and (max-device-width: 1100px) {
+    #reservationPage .half {
+      width: 100%;
+      padding: 0; }
+    #reservationPage #reservation .booking-table input, #reservationPage #reservation .booking-table button, #reservationPage #reservation .booking-table input[type="date"] {
+      width: 90%;
+      text-align: center; } }
 
 @media only screen and (max-device-width: 1100px) {
   body {

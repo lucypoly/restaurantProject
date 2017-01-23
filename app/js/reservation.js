@@ -51,12 +51,6 @@ function fillHours(hours, selector) {
 function checkStartTime(date) {
     var startHours = [];
 
-    if (startHours.length == 0){
-        document.getElementById('invalid-table').style.display = 'inline-block';
-        document.getElementById('invalid-table').innerHTML = "This table is not available! Please select another one!";
-    } else {
-        document.getElementById('invalid-table').style.display = 'none';
-    }
 
     if (Date.parse(new Date().toDateString()) > Date.parse(new Date(date).toDateString())) {
         document.getElementById('invalid-future').style.display = 'inline-block';
@@ -87,6 +81,13 @@ function checkStartTime(date) {
         startHours.pop();
     }
     fillHours(startHours, '#start');
+
+    if (startHours.length == 0){
+        document.getElementById('invalid-table').style.display = 'inline-block';
+        document.getElementById('invalid-table').innerHTML = "This table is not available! Please select another one!";
+    } else {
+        document.getElementById('invalid-table').style.display = 'none';
+    }
 }
 
 

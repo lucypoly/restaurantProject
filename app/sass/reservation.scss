@@ -2,6 +2,7 @@
 @import "mixin.scss";
 
 #reservationPage {
+  background: linear-gradient(to right, #19424d 0%, #340f1d 50%);
   .booking-form {
     margin-bottom: 50px;
   }
@@ -25,36 +26,41 @@
     .booking-table {
       background-color: $blue;
       width: 80%;
-      @include opacity(0.9);
-      input, button, input[type="date"] {
+      border-radius:7px;
+      @include opacity(0.8);
+      input, input[type="date"], select {
         padding: 8px 16px;
         border: none;
         outline: none;
         width: 50%;
         font-size: 20px;
         margin: 5px 0;
-        color: gray;
+        color: black;
         background-color: white;
-
+        border-radius: 4px;
+        &:focus{
+          background-color: #E5E6E7;
+        }
       }
       button {
+        padding: 8px 16px;
+        border: none;
+        outline: none;
+        width: 50%;
         background-color: gray;
         color: white;
         font-size: 20px;
         margin: 5px 0;
         cursor: pointer;
         display: inline-block;
+        border-radius: 4px;
         &:hover {
           background-color: #606060;
         }
       }
       select {
-        padding: 5px 10px;
-        border: none;
-        outline: 0;
-        font-size: 20px;
-        margin: 5px 5px;
-        color: gray;
+        width: 50px;
+        padding: 0;
       }
       .error {
         color: coral;
