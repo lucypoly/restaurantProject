@@ -93,8 +93,6 @@ li.dropdown {
     display: block;
     background-color: #333;
     width: 100%; }
-    li.dropdown .dropdown-content a {
-      width: 100%; }
 
   ul.topnav.responsive {
     position: relative; }
@@ -542,6 +540,23 @@ div.label {
   .stars h1 {
     color: #ffeffa; }
 
+.img-wrap {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
+  height: 225px;
+  position: relative; }
+  .img-wrap span {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    font-weight: bold; }
+  .img-wrap:hover span {
+    display: inline; }
+  .img-wrap .rounded:hover {
+    opacity: 0.4; }
+
 .thumb {
   width: 250px;
   display: inline-block;
@@ -565,79 +580,68 @@ div.label {
       font-weight: 900;
       line-height: 1.1; }
 
-.icon {
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
-  margin: 4px;
-  width: 96px;
-  height: 96px;
-  font-size: 0;
-  text-indent: -9999px; }
-
-.icon-cube {
-  position: relative;
-  -webkit-perspective: 800px;
-  perspective: 800px;
-  overflow: visible; }
-
-.icon-cube::before,
-.icon-cube::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../img/icons5.png");
-  background-image: url("../img/icons5.svg"), none;
-  content: "";
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.icon-cube::before {
-  z-index: 2;
-  background-color: #595959; }
-
-.icon-cube::after {
-  z-index: 1;
-  opacity: 0;
-  -webkit-transform: translateY(48px) rotateX(-90deg);
-  transform: translateY(48px) rotateX(-90deg); }
-
-.icon-cube:hover::before {
-  opacity: 0;
-  -webkit-transform: translateY(-48px) rotateX(90deg);
-  transform: translateY(-48px) rotateX(90deg); }
-
-.icon-cube:hover::after {
-  opacity: 1;
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg); }
-
-/* facebook */
-.icon-cube.facebook::before,
-.icon-cube.facebook::after {
-  background-position: 0 0; }
-
-.icon-cube.facebook::after {
-  background-color: #3b5998; }
-
-/* twitter */
-.icon-cube.twitter::before,
-.icon-cube.twitter::after {
-  background-position: -96px 0; }
-
-.icon-cube.twitter::after {
-  background-color: #4099ff; }
-
-/* google plus */
-.icon-cube.googleplus::before,
-.icon-cube.googleplus::after {
-  background-position: -192px 0; }
-
-.icon-cube.googleplus::after {
-  background-color: #d34836; }
+#aboutPage {
+  /* facebook */
+  /* twitter */
+  /* google plus */ }
+  #aboutPage .icon {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    margin: 4px;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px; }
+  #aboutPage .icon-cube {
+    position: relative;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    overflow: visible; }
+  #aboutPage .icon-cube::before,
+  #aboutPage .icon-cube::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icons5.png");
+    background-image: url("../img/icons5.svg"), none;
+    content: "";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  #aboutPage .icon-cube::before {
+    z-index: 2;
+    background-color: #595959; }
+  #aboutPage .icon-cube::after {
+    z-index: 1;
+    opacity: 0;
+    -webkit-transform: translateY(48px) rotateX(-90deg);
+    transform: translateY(48px) rotateX(-90deg); }
+  #aboutPage .icon-cube:hover::before {
+    opacity: 0;
+    -webkit-transform: translateY(-48px) rotateX(90deg);
+    transform: translateY(-48px) rotateX(90deg); }
+  #aboutPage .icon-cube:hover::after {
+    opacity: 1;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg); }
+  #aboutPage .icon-cube.facebook::before,
+  #aboutPage .icon-cube.facebook::after {
+    background-position: 0 0; }
+  #aboutPage .icon-cube.facebook::after {
+    background-color: #3b5998; }
+  #aboutPage .icon-cube.twitter::before,
+  #aboutPage .icon-cube.twitter::after {
+    background-position: -96px 0; }
+  #aboutPage .icon-cube.twitter::after {
+    background-color: #4099ff; }
+  #aboutPage .icon-cube.googleplus::before,
+  #aboutPage .icon-cube.googleplus::after {
+    background-position: -192px 0; }
+  #aboutPage .icon-cube.googleplus::after {
+    background-color: #d34836; }
 
 @media only screen and (max-device-width: 768px) {
   .thumb {
