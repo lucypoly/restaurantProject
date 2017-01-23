@@ -25,7 +25,7 @@
     .booking-table {
       background-color: $blue;
       width: 80%;
-      @include opacity(0.7);
+      @include opacity(0.9);
       input, button, input[type="date"] {
         padding: 8px 16px;
         border: none;
@@ -64,7 +64,11 @@
     }
   }
 
-  @media only screen and (max-device-width: 768px) {
+  @media only screen and (max-device-width: 1100px) {
+    .half{
+      width: 100%;
+      padding: 0;
+    }
     #reservation {
       .booking-table {
         input, button, input[type="date"] {
@@ -76,11 +80,11 @@
   }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 1100px) {
   body {
     padding: 100px 0 0;
   }
   #reservationPage #reservation .booking-table{
-    width: 95%;
+    width: 100%;
   }
 }

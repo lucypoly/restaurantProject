@@ -11,6 +11,7 @@
     #googleMap {
       width: 60%;
       margin-bottom: 60px;
+      min-height: 300px;
     }
     .text{
       width: 35%;
@@ -84,14 +85,13 @@
   }
 }
 
-@media only screen
-and (max-device-width: 768px){
+@media only screen and (max-device-width: 768px){
   body{
     background: black;
     padding: 50px 0;
   }
   #contactPage #contact-form {
-    min-width:100%;
+    width:100%;
   }
 
   #contactPage #contacts #googleMap {

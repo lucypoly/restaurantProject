@@ -74,10 +74,6 @@ $(document).ready(function () {
                     count++;
                 }
             });
-
-            // Update the count
-            var numberItems = count;
-            $("#filter-count").text("Number of dishes = " + count);
         });
     }
 });
