@@ -1,25 +1,15 @@
 var pagination;
 $(document).ready(function () {
     pagination = function () {
-        //how much items per page to show
         var show_per_page = 5;
-        //getting the amount of elements inside content div
         var number_of_items = $('#content').children().not(':hidden').size();
-        //calculate the number of pages we are going to have
         var number_of_pages = Math.ceil(number_of_items / show_per_page);
 
         //set the value of our hidden input fields
         $('#current_page').val(0);
         $('#show_per_page').val(show_per_page);
 
-        //now when we got all we need for the navigation let's make it '
 
-        /*
-         what are we going to have in the navigation?
-         - link to previous page
-         - links to specific pages
-         - link to next page
-         */
         var navigation_html = '<a class="previous_link" href="javascript:previous();">Prev</a>';
         var current_link = 0;
 
@@ -65,6 +55,7 @@ $(document).ready(function () {
 function previous() {
 
     new_page = parseInt($('#current_page').val()) - 1;
+
     //if there is an item before the current active link run the function
     if ($('.active_page').prev('.page_link').length == true) {
         go_to_page(new_page);
@@ -74,6 +65,7 @@ function previous() {
 
 function next() {
     new_page = parseInt($('#current_page').val()) + 1;
+
     //if there is an item after the current active link run the function
     if ($('.active_page').next('.page_link').length == true) {
         go_to_page(new_page);
@@ -81,13 +73,10 @@ function next() {
 
 }
 function go_to_page(page_num) {
-    //get the number of items shown per page
     var show_per_page = parseInt($('#show_per_page').val());
 
-    //get the element number where to start the slice from
     start_from = page_num * show_per_page;
 
-    //get the element number where to end the slice
     end_on = start_from + show_per_page;
 
     //hide all children elements of content div, get specific items and show them
