@@ -1,11 +1,5 @@
-$(document).ready(function () {
-    $('.main-info').on('click', function (evt) {
-        $(this).siblings('.details').toggle();
-    });
-    $('.details:first').css('display', 'flex')
-});
 
-
+//highlighting link of current page
 $(document).ready(function () {
     var current = location.pathname.split('/');
     current = current[current.length - 1].split('.');
@@ -14,29 +8,7 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    function filtrationEvent(inputId, elementClass) {
-        $('input#' + inputId).on('click', function () {
-            $('div.event-item').not('.' + elementClass).hide();
-            $('div.event-item').not('.' + elementClass).removeClass('toShow');
-            $('div.event-item.' + elementClass).show();
-            $('div.event-item.' + elementClass).addClass('toShow');
-            pagination();
-        });
-    }
-
-    filtrationEvent('music', 'Music');
-    filtrationEvent('food', 'Food');
-    filtrationEvent('disco', 'Disco');
-    filtrationEvent('games', 'Games');
-
-    $('input#all').on('click', function () {
-        $('div.event-item').removeClass('toShow');
-        $('div.event-item').show();
-        pagination();
-    });
-});
-
+//trigger menu in the case of mobile version
 function menuCollapse() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -47,8 +19,8 @@ function menuCollapse() {
 }
 
 
-
-// window.onload = function () {
-//     window.scrollTo(0,0);
-// };
+//avoid scrolling to the bottom of rhe page
+window.onload = function () {
+    window.scrollTo(0,0);
+};
 

@@ -1,11 +1,11 @@
-header{
+header {
   position: relative;
 }
-div.label{
+
+div.label {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
   text-align: center;
   font-size: 60px;
   text-transform: uppercase;
@@ -16,7 +16,7 @@ div.label{
   background-color: rgba(51, 51, 51, 0.62);
   transition: background-color .25s;
 
-  &:hover{
+  &:hover {
     background-color: rgba(51, 51, 51, 0.8);
   }
-  }
+}

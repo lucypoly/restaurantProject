@@ -1,5 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
+
+//price sorting in the menu
 function sortingEvent (comparisonParameter) {
     var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
     var $target = $('#starter, #main, #dessert');
@@ -27,11 +29,14 @@ function sortingEvent (comparisonParameter) {
     }
 }
 
+
+//current tab is blue
 $(document).ready(function () {
     $("#selected").click().children().removeClass('black').addClass('blue');
 });
 
 
+//tabs opened by displaying and hiding other content
 function openMenu(evt, menuName) {
     var i, x, tabs;
     x = $(".menu");
@@ -47,6 +52,7 @@ function openMenu(evt, menuName) {
 }
 
 
+//search by menu items in each tab
 $(document).ready(function () {
     menuSearchEvent('menu-item-main');
     menuSearchEvent('menu-item-dessert');
@@ -55,17 +61,14 @@ $(document).ready(function () {
     function menuSearchEvent(menuItem) {
         $("#" + menuItem + "-search").keyup(function () {
 
-            // Retrieve the input field text and reset the count to zero
             var filter = $(this).val(), count = 0;
 
-            // Loop through
             $("." + menuItem + " h1 b").each(function () {
 
                 // If the list item does not contain the text phrase fade it out
                 if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                     $(this).parent().parent().hide();
 
-                    // Show the list item if the phrase matches and increase the count by 1
                 } else {
                     $(this).parent().parent().show();
                     count++;

@@ -1,3 +1,5 @@
+
+//google maps init
 var myCenter = new google.maps.LatLng(50.448158, 30.522104);
 
 function initialize() {
