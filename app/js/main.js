@@ -4,7 +4,9 @@ $(document).ready(function () {
     var current = location.pathname.split('/');
     current = current[current.length - 1].split('.');
     var id = current[0];
-    $('#' + id).addClass('highlight_stay');
+    if ((id == 'contacts')||(id =='menu')||(id == 'reservation')||(id == 'events')){
+        $('#clients-href').addClass('highlight_stay');
+    } else  $('#' + id).addClass('highlight_stay');
 });
 
 
@@ -19,7 +21,7 @@ function menuCollapse() {
 }
 
 
-//avoid scrolling to the bottom of rhe page
+//avoid scrolling to the bootom of rhe
 window.onload = function () {
     window.scrollTo(0,0);
 };
