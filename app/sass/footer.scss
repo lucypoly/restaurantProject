@@ -1,4 +1,4 @@
-footer{
+footer {
   width: 100%;
   margin: 0;
   background-color: #333;
@@ -15,7 +15,16 @@ footer{
   font-size: 24px;
   padding: 8px 16px;
   box-sizing: border-box;
-  &:hover{
+  &:hover {
     opacity: 1;
   }
+  a.a-fa {
+    text-decoration: none;
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+    &:hover {
+      color: wheat;
+    }
+  }
 }
+

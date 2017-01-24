@@ -133,6 +133,12 @@ footer {
   box-sizing: border-box; }
   footer:hover {
     opacity: 1; }
+  footer a.a-fa {
+    text-decoration: none;
+    color: white;
+    font-family: "Amatic SC", sans-serif; }
+    footer a.a-fa:hover {
+      color: wheat; }
 
 header {
   position: relative; }
