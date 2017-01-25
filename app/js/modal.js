@@ -4,10 +4,9 @@ $(document).ready(function () {
 
         //window opened in current position of the user
         var position = $(window).scrollTop();
-        var height = $( window ).height();
         var width = $( window ).width();
 
-        //added current to the modal window by path
+        //added current img to the modal window by path
         $('#imgModal').html('<img src="' + src + '"/>');
         $('#imgModal').css('display', 'block');
         event.preventDefault();

@@ -3,11 +3,11 @@
 
 //price sorting in the menu
 function sortingEvent (comparisonParameter) {
-    var $elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
-    var $target = $('#starter, #main, #dessert');
+    var elements = [$('.menu-item-starter'), $('.menu-item-main'), $('.menu-item-dessert')];
+    var target = $('#starter, #main, #dessert');
 
-    for (var i = 0; i < $elements.length; i++) {
-        $elements[i].sort(function (a, b) {
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].sort(function (a, b) {
             var an = $(a).find('span').text(),
                 bn = $(b).find('span').text();
 
@@ -25,7 +25,7 @@ function sortingEvent (comparisonParameter) {
                 }
             }
         });
-        $elements[i].detach().appendTo($target[i]);
+        elements[i].detach().appendTo(target[i]);
     }
 }
 

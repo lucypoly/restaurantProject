@@ -16,14 +16,14 @@ $(document).ready(function () {
         if (number_of_pages > 10) {
             while (number_of_pages > current_link) {
                 if ((current_link < number_of_pages/3) || (current_link > 2*number_of_pages/3)) {
-                    navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+                    navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" title="' + current_link + '">' + (current_link + 1) + '</a>';
                 }
                 current_link++;
             }
         }
         else {
             while (number_of_pages > current_link) {
-                navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+                navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" title="' + current_link + '">' + (current_link + 1) + '</a>';
                 current_link++;
             }
         }
@@ -80,11 +80,18 @@ function go_to_page(page_num) {
     end_on = start_from + show_per_page;
 
     //hide all children elements of content div, get specific items and show them
-    $('#content').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+    $('#content').children().css('display', 'none');
+
+    //and show the first n (show_per_page) elements
+    if ($('#content').find('.toShow').length !== 0) {
+        $('.toShow').slice(start_from, end_on).css('display', 'block');
+    } else {
+        $('#content').children().slice(start_from, end_on).css('display', 'block');
+    }
 
     /*get the page link that has longdesc attribute of the current page and add active_page class to it
      and remove that class from previously active page link*/
-    $('.page_link[longdesc=' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+    $('.page_link[title=' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
 
     //update the current page input field
     $('#current_page').val(page_num);
