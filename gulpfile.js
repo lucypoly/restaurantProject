@@ -35,11 +35,11 @@ gulp.task('handlebars', function () {
         .pipe(livereload())
 });
 
-gulp.task('img', () =>
-    gulp.src('app/img/**/*')
+gulp.task('img', function () {
+    return gulp.src('app/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('app/dist/img'))
-);
+});
 
 
 gulp.task('sass', function () {

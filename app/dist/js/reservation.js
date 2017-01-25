@@ -128,7 +128,7 @@ document.querySelector('#start').addEventListener('blur', function (event) {
         });
 
         //if the table is full
-        if(endHours.length == 0){
+        if (endHours.length == 0) {
             document.getElementById('invalid-table').style.display = 'inline-block';
             document.getElementById('invalid-table').innerHTML = "Please, select time earlier or later";
         } else {
