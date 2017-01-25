@@ -99,16 +99,25 @@ document.querySelector('#date').addEventListener('blur', function () {
 document.querySelector('#start').addEventListener('blur', function (event) {
 
         var startHour = +event.target.value;
-        var bookingEnd = availableHours.indexOf(startHour);
-        while (availableHours[bookingEnd + 1] - availableHours[bookingEnd] < 2) {
-            bookingEnd++;
+        var bookingEndIndex = availableHours.indexOf(startHour);
+        while (availableHours[bookingEndIndex + 1] - availableHours[bookingEndIndex] < 2) {
+            bookingEndIndex++;
         }
 
         var endHours = availableHours.filter(function (el, k) {
-            return (el > +startHour) && k <= bookingEnd;
+            return (el > +startHour) && k <= bookingEndIndex;
         });
 
+        if(endHours.length == 0){
+            document.getElementById('invalid-table').style.display = 'inline-block';
+            document.getElementById('invalid-table').innerHTML = "Please, select time earlier or later";
+        } else {
+            document.getElementById('invalid-table').style.display = 'none';
+        }
+
         fillHours(endHours, '#end');
+
+
     }
 );
 
@@ -185,6 +194,7 @@ function checkDate(str) {
     }
 }
 
+//table cleaning
 $(document).ready(function () {
     PopUpHide();
     $('.table').on('click', function (evt) {
@@ -194,6 +204,8 @@ $(document).ready(function () {
 
     });
 });
+
+//popup
 function PopUpShow() {
     $("#popup1").show();
 }

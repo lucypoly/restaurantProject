@@ -64,7 +64,7 @@ $(document).ready(function () {
 
             $("." + menuItem + " h1 b").each(function () {
 
-                // If the list item does not contain the text phrase fade it out
+                // If the list item does not contain the text phrase hide it
                 if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                     $(this).parent().parent().hide();
 
