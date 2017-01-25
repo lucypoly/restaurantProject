@@ -68,7 +68,7 @@ gulp.task('application-watch', ['js'], function (done) {
 });
 
 
-gulp.task('serve', ['sass', 'js',], function () {
+gulp.task('serve', ['sass', 'js'], function () {
     browserSync.init({
         server: ['app', 'app/dist']
     });
