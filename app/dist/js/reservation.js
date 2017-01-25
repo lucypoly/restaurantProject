@@ -34,6 +34,11 @@ document.querySelectorAll('g')[2].addEventListener('click', function (event) {
 });
 
 
+/**
+ * fill hours into select field
+ * @param hours - array of hours
+ * @param selector - selector of <select> field to fill
+ */
 function fillHours(hours, selector) {
     var select = document.createDocumentFragment();
     var option = document.createElement('option');
@@ -49,10 +54,15 @@ function fillHours(hours, selector) {
     myNode.appendChild(select);
 }
 
+
+/**
+ * check what time reservation could be started at
+ * @param date - string date
+ */
 function checkStartTime(date) {
     var startHours = [];
 
-
+// if @param date is past
     if (Date.parse(new Date().toDateString()) > Date.parse(new Date(date).toDateString())) {
         document.getElementById('invalid-future').style.display = 'inline-block';
         document.getElementById('invalid-future').innerHTML = "Please, select a future date!";
@@ -77,11 +87,16 @@ function checkStartTime(date) {
         if (availableHours.indexOf(24) > -1) {
             startHours.splice(startHours.indexOf(24), 1);
         }
+
+        // if current day doesn't have bookings yet
     } else {
         startHours = availableHours.slice();
         startHours.pop();
     }
+
     fillHours(startHours, '#start');
+
+    //if no available hours another hour should be selected
 
     if (startHours.length == 0) {
         document.getElementById('invalid-table').style.display = 'inline-block';
@@ -101,14 +116,18 @@ document.querySelector('#start').addEventListener('blur', function (event) {
 
         var startHour = +event.target.value;
         var bookingEndIndex = availableHours.indexOf(startHour);
+
+        //check if there is a gap before next booking
         while (availableHours[bookingEndIndex + 1] - availableHours[bookingEndIndex] < 2) {
             bookingEndIndex++;
         }
 
+        // fill for end hours that are after the start time, but not after next booking
         var endHours = availableHours.filter(function (el, k) {
             return (el > +startHour) && k <= bookingEndIndex;
         });
 
+        //if the table is full
         if(endHours.length == 0){
             document.getElementById('invalid-table').style.display = 'inline-block';
             document.getElementById('invalid-table').innerHTML = "Please, select time earlier or later";
@@ -117,14 +136,13 @@ document.querySelector('#start').addEventListener('blur', function (event) {
         }
 
         fillHours(endHours, '#end');
-
-
     }
 );
 
 
 document.querySelector('#book').addEventListener('click', function (e) {
 
+    //do only if form is valid
     e.preventDefault();
     if (!checkName(document.querySelector('#name').value) || !checkNumber(document.querySelector('#number').value) || !checkDate(document.querySelector('#date').value)) return;
 
@@ -145,6 +163,7 @@ document.querySelector('#book').addEventListener('click', function (e) {
     };
 
 
+    //check if there are another bookings for this date for this table
     if (booking[currentTable.name][document.querySelector('#date').value]) {
         booking[currentTable.name][document.querySelector('#date').value].push(currentBooking);
     } else {
@@ -153,6 +172,8 @@ document.querySelector('#book').addEventListener('click', function (e) {
     }
 
     localStorage.setItem('booking', JSON.stringify(booking));
+
+    //the end of the process of booking
     PopUpShow();
     $('.table').css('fill', '#004d4d');
     document.getElementById("reservationForm").reset();
