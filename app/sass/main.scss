@@ -37,13 +37,22 @@ p{text-align: justify}
 .rounded{border-radius: 50%;
 }
 
+.bx-wrapper .bx-controls-direction a{
+  z-index: 3;
+}
 
 
 @media only screen
 and (max-device-width: 768px){
-.container{
-    padding: 40px 20px;
+  body {
+    padding: 80px 0 40px 0;
   }
+  body#mainPage{
+    padding:0;
+  }
+//.container{
+//    padding: 80px 0 40px 0;
+//  }
   .padding-30{
     padding: 10px;
   }
@@ -52,6 +61,7 @@ and (max-device-width: 768px){
   }
   .half{
     width: 100%;
+    padding: 0;
   }
   .left{
     float: none;

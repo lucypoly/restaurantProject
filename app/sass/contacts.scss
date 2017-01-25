@@ -24,10 +24,13 @@
   }
 
   h1 {
-    background-color:rgba(72,72,72,0.7);
     display: inline-block;
     margin: 50px 0 20px 0;
     padding: 10px;
+  }
+
+  h1:first-of-type{
+    background-color:rgba(72,72,72,0.7);
   }
 
   #contact-form {
@@ -87,6 +90,11 @@
 }
 
 @media only screen and (max-device-width: 768px){
+  #contacts{
+    h1{
+      margin: 10px 0;
+    }
+  }
   body{
     background: black;
     padding: 50px 0;
